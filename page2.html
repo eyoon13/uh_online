@@ -15,13 +15,13 @@
 
     <!-- Custom CSS -->
 
-	<link href="css/old-styles.css" rel="stylesheet">
+  <link href="css/old-styles.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<script src="js/parallax.js"></script>
+  <script src="js/parallax.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,8 +31,10 @@
 
 </head>
 
-<body>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+<body>  
+
+ <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <nav class="navbar navbar-lg navbar-inverse" role="navigation">
           <div class="navbar-header">
@@ -67,17 +69,18 @@
     <div class="parallax p5" id="section-1">
     <div class="col-md-12 panel2">
           <div class="col-md-12">
-		<div><h2>What are your interests?</h2></div>
+    <div><h2>What are your interests?</h2></div>
         <div><p>Let us Help you!  Please enter your information below.</p></div>
-		<div class="form text-center">
+    <div class="form text-center">
             <div class="form-group col-md-4">
            <input type="text" value="" placeholder="First Name" class="form-control" />
          </div>
          <div class="form-group col-md-4">
            <input type="text" value="" placeholder="Last Name" class="form-control" />
          </div>
-    <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
-      <option value="" selected="selected">General Interest</option>
+  <form method="POST" action="program-select.html">
+    <select name="course_dropdown" id="course_dropdown" class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+      <option value="0" selected="selected">General Interest</option>
       <option value="1">Accounting &amp; Finance</option>
       <option value="2">Art &amp; Design</option>
       <option value="3">Business</option>
@@ -105,12 +108,14 @@
       <option value="25">Social Sciences</option>
       <option value="26">Sport Management &amp; Athletic Admin</option>
     </select>
+    <input type="submit" value="submit"/>
+  </form>
     <div class="col-md-12 text-center">
-        <a href="program-select.html" class="btn btn-sm btn-danger starting2">What Programs Are Available</a>
+        <a href="" id="ddButton"class="btn btn-sm btn-danger starting2">What Programs Are Available</a>
     </div>
-		</div>
+    </div>
 
-	</div>
+  </div>
 </div>
     </div>
     <div class="row">
@@ -134,24 +139,24 @@
 </div>
     <div class="parallax p2" id="section-2">
       <hgroup>
-         <form-group>
+         <form id="info_form_1">
          <div class="col-md-12">
         <h1>Please fill out this form to recieve more information</h1>
         </div>
         <div class="form-group col-md-6">
-       <input type="text" value="" placeholder="First Name" class="form-control" />
+       <input type="text" name="first_name" value="" placeholder="First Name" class="form-control" />
      </div>
      <div class="form-group col-md-6">
-       <input type="text" value="" placeholder="Last Name" class="form-control" />
+       <input type="text" name="last_name" value="" placeholder="Last Name" class="form-control" />
      </div>
      <div class="form-group col-md-12">
-       <input type="text" value="" placeholder="Email" class="form-control" />
+       <input type="text" name="email" placeholder="Email" class="form-control">
      </div>
      <div class="form-group col-md-12">
       <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
      </div>
-    <h2 class="col-md-12"><button class="btn btn-danger">Submit</button></h2>
-        </form-group>
+    <h2 class="col-md-12"><button type="submit" form="info_form" id="gen_info" va class="btn btn-danger">Submit</button></h2>
+        </form>
       </hgroup>
     </div>
     <div class="row">
@@ -213,86 +218,20 @@
 
 
     </div>
-    <footer>
-      <div id="section-3">
-        <div id="nav-bottom">
-                    <div class="nav-bottom-list col-md-4 col-s-12">
-                        <div class="hdr"><a href="studentservices">Student Services</a></div>
-                        <ul>
-                            <li><a href="studentservices#academicadvising">Academic Advising</a></li>
-                            <li><a href="http://www.hawaii.edu/academics/calendar/" target="_blank">Academic Calendar</a></li>
-                            <li><a href="studentservices#bookordering">Book Ordering</a></li>
-                            <li><a href="studentservices#its">Technology Services</a></li>
-                            <li><a href="studentservices#financialaid">Financial Aid</a></li>
-                            <li><a href="studentservices#libraries">Libraries</a></li>
-                            <li><a href="studentservices#registration">Registration</a></li>
-                            <li><a href="studentservices#testcenters">Test Centers</a></li>
-                            <li><a href="studentservices#tutoring">Tutoring</a></li>
-                        </ul>
-                        <div class="hdr">Student DL Guides</div>
-                        <ul>
-                            <li><a href="cable">Cable</a></li>
-                            <li><a href="interactivevideo">Interactive Video</a></li>
-                            <li><a href="onlinelearning">Online Learning</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-bottom-list col-md-4 col-s-12">
-                        <div class="hdr">Help?</div>
-                        <ul>
-                            <li><a href="http://www.hawaii.edu/its/about/helpdesk.html" target="_blank">ITS Help Desk</a></li>
-                            <li><a href="https://laulima.hawaii.edu/portal/site/!gateway/page/4e42f89c-17b3-45ba-8002-8a347e837e09" target="_blank">Laulima Help</a></li>
-                            <li><a href="cabletrouble">Cable TV Help</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-bottom-list col-md-4 col-s-12">
-                        <div class="hdr">Rights &amp; Responsibilties</div>
-                        <ul>
-                            <li><a href="accessibility">Accessibility</a></li>
-                            <li><a href="copyright">Copyright</a></li>
-                            <li><a href="https://www.hawaii.edu/policy/index.php?action=viewPolicy&policySection=ep&policyChapter=7&policyNumber=208&menuView=open" target="_blank">Code of Conduct</a></li>
-                            <li><a href="grievance">Grievance Policy</a></li>
-                            <li><a href="governance">Governance</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-bottom-list col-md-4 col-s-12">
-                        <div class="hdr">Campus DL Pages</div>
-                        <ul>
-                            <li><a href="hawaii">Hawai&#699;i Community College</a></li>
-                            <li><a href="honolulu">Honolulu Community College</a></li>
-                            <li><a href="kapiolani">Kapi&#699;olani Community College</a></li>
-                            <li><a href="kauai">Kaua&#699;i Community College</a></li>
-                            <li><a href="leeward">Leeward Community College</a></li>
-                            <li><a href="hilo">UH Hilo</a></li>
-                            <li><a href="manoa">UH M&#257;noa</a></li>
-                            <li><a href="outreach">UH M&#257;noa Outreach</a></li>
-                            <li><a href="maui">UH Maui College</a></li>
-                            <li><a href="westoahu">UH West O&#699;ahu</a></li>
-                            <li><a href="windward">Windward Community College</a></li>
-                        </ul>
-                    </div>
-					</div>
-      </div>
-	  <div class="left-align">
-                    <div id="admin"><a href="login">Login</a> to manage this website.</div>
-                    <div id="usage-policy">Use of this site implies consent with our <a href="http://www.hawaii.edu/infotech/policies/itpolicy.html" target="_blank">Usage Policy</a></div>
-                    <div id="eeo">The University of Hawai&#699;i is an <a href="http://www.hawaii.edu/site/policy/eoe.html" target="_blank">Equal Opportunity Employer</a></div>
-
-                </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <div id="copyright">copyright &copy;2016 <a href="http://www.hawaii.edu/" target="_blank">University of Hawai&#699;i</a></div>
-        </div>
-      </div>
-    </footer>
+<?php include_once('footer.php'); ?>
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
+    <script src="js/page_2.js"></script>
 
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
     </script>
+</html>
+
+</body>
 </html>

@@ -399,6 +399,11 @@ footer p {
     }
 }
 
+.error {
+  color: #FF0000;
+}
+
+
 
 /* Blank lines for ease and view */
 /* */
