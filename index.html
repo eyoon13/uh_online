@@ -33,37 +33,9 @@
 
 <body>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <nav class="navbar navbar-lg navbar-inverse" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-              <span class="sr-only">Toggle navigation</span>
-            </button>
-            <a class="navbar-brand uh-branding-one" href="index.html">Distance Learning @ UH</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-01">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a Program<b class="caret"></b></a>
-                <span class="dropdown-arrow"></span>
-                <ul class="dropdown-menu">
-                  <li><a href="program-select.html">All Programs</a></li>
-                  <li class="divider"></li>
-                <li><a href="program-select1.html">Certificate Programs</a></li>
-                <li><a href="program-select2.html">AA Programs</a></li>
-                <li><a href="program-select3.html">BA Programs</a></li>
-                <li><a href="#">Post-Baccalaureate</a></li>
-                <li><a href="#">Graduate Certificate</a></li>
-                <li><a href="#">Master Degree</a></li>
-                <li><a href="#">Doctoral Degree</a></li>
-                </ul>
-              </li>
-              <li><a href="https://www.hawaii.edu/dl/courses/">Courses</a></li>
-              <li><a href="https://laulima.hawaii.edu/portal">Laulima</a></li>
-              <li><a href="https://myuh.hawaii.edu/">MyUH</a></li>
-             </ul>
-          </div><!-- /.navbar-collapse -->
-        </nav>
+    <header>
+      <?php include_once('resources/templates/header.php'); ?>
+    </header>
     <div class="parallax p1" id="section-1">
     <div class="col-md-7">
     </div>
@@ -87,18 +59,21 @@
     <div class="row">
       <div class="col-md-12 col-xs-12">
     </div>
-        <div class="col-md-4 col-xs-12">
-        <h2>How Does It Work</h2>
-        <p>Students in multiple locations interact with the instructor and their fellow classmates using distance delivery methods such as Cable, Interactive Video (ITV) and Online.</p>
+        <div class="col-md-6 col-xs-12">
+        <h2>What is Distance Learning?</h2>
+        <p>Distance learning provides students with access to education through a network of various technologies. Instructor and students interact at a distance without having to be physically present in the same location. Distance learning provides students greater flexibility in achieving their educational goals through audio, video, and computer technologies.</p>
       </div>
-      <div class="col-md-4 col-xs-12">
-        <h2>What Services Are Available</h2>
-        <p>Accessibility, Technology Services, Libraries, Test Centers and Tutoring are all services provided to Distance Learning Students. For more information about the different types of services available, visit our services <a href="http://www.hawaii.edu/dl/whatservicesareavailable">page</a></p>
+      <div class="col-md-6 col-xs-12">
+        <h2>How Does It Work?</h2>
+        <p>
+Students in multiple locations interact with the instructor and their fellow classmates using distance delivery methods such as cable, Interactive Video (ITV) and online.  Cable allows students to take courses in the convenience of their home using their television cable provider subscription.  ITV allows students to take a course from one location while the instructor teaches from another.   Online allows students to take a course using a personal computer or laptop.<a href="http://www.hawaii.edu/dl/howdoesitwork"> More Information.</a></p>
       </div>
-      <div class="col-md-4 col-xs-12">
-        <h2>How Do I Get Started</h2>
-         <p><strong>Enroll at the University of Hawaiʻi</strong> <br>To take a distance learning course or enter a distance learning program, you need submit a System Application Form and apply to the campus at which you plan to earn your degree. This campus will be considered your home campus. For more information go to the <a href="http://www.hawaii.edu/admissions/">Admissions Overview website.</a>
-      </div>
+    </div>
+    <div class="parallax p2" id="section-2">
+      <hgroup>
+        <h1>Is This for Me?</h1>
+         <p>Distance Learning is not for everyone. Distance learning in many cases provides students greater flexibility. This flexibility includes freeing students from the constraints of travel or relocation, affording them opportunities to take courses otherwise non-accessible due to scheduling or physical constraints. As a result, students have more control over their own learning; successful completion will depend on the individual student's self-discipline and commitment to the course or program.</p><h2><button class="btn btn-danger" href="https://www.hawaii.edu/dl/selfassessmentquiz">Take The Assement Quiz!</button></h2>
+      </hgroup>
     </div>
     <div class="parallax p3">
       <hgroup>
@@ -106,42 +81,7 @@
         <p>Distance learning allows students to pursue a higher education anywhere at any time. However, many distance learning courses may not be accessible to students with disabilities. When planning and developing a distance learning course, faculty and instructional designers should take into consideration design guidelines for assuring accessibility for students with disabilities. Faculty may contact their campus Disability Service Provider for more information.</p>
       </hgroup>
     </div>
-        <div class="parallax p2" id="section-2">
-      <hgroup>
-        <h1>Is This for Me?</h1>
-        <p>Distance Learning is not for everyone. Distance learning in many cases provides students greater flexibility. This flexibility includes freeing students from the constraints of travel or relocation, affording them opportunities to take courses otherwise non-accessible due to scheduling or physical constraints. As a result, students have more control over their own learning; successful completion will depend on the individual student's self-discipline and commitment to the course or program.</p>
-        <h2><button class="btn btn-danger" href="https://www.hawaii.edu/dl/selfassessmentquiz">Take The Assement Quiz!</button></h2>
-      </hgroup>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
-        <h2>Test Centers</h2>
-        <p>The instructor determines how exams are handled. In most cases, exams are taken in class for ITV courses, and completed online using Laulima for cable and online courses. However, some instructors may require students to take their exams at a nearby <a href="https://www.hawaii.edu/dl/testcenters">UH Test Center</a>. Students should always check with their instructor or course syllabus for test-taking instructions.</p>
-      </div>
-      <div class="col-md-8 col-sm-12">
-        <h2>Tutoring</h2>
-    </div>
-        <div class="col-md-4 col-sm-12">
-        <p>Online tutoring is provided on most UH campuses.  If you are taking a course from another campus and your home campus does not provide online tutoring, you may want to contact the host campus (campus offering the course) to see if this service is available to you.</p>
-      </div>
-      <div class="col-md-4 col-sm-12">
-          <section>
-                    <ul>
-                        <li><a href="http://hawaii.hawaii.edu/brainfuse/" target="_blank">Hawai&#699;i CC</a></li>
-                        <li><a href="http://www.honolulu.hawaii.edu/node/18" target="_blank">Honolulu CC</a></li>
-                        <li><a href="http://kahikoluamea.kcc.hawaii.edu/index.php?option=com_content&amp;view=article&amp;id=43&amp;Itemid=59" target="_blank">Kapi&#699;olani CC</a></li>
-                        <li><a href="https://sites.google.com/a/hawaii.edu/tutoring-services/" target="_blank">Kaua&#699;i CC</a></li>
-                        <li><a href="http://www2.leeward.hawaii.edu/lrc/" target="_blank">Leeward CC</a></li>
-                        <li><a href="http://hilo.hawaii.edu/kilohana/tutoring.php" target="_blank">UH Hilo</a></li>
-                        <li><a href="http://manoa.hawaii.edu/ola/" target="_blank">UH M&#257;noa</a></li>
-                        <li><a href="http://maui.hawaii.edu/tlc/tutoring/brainfuse/" target="_blank">UH Maui College</a></li>
-                        <li><a href="http://westoahu.hawaii.edu/wlconlinehelp" target="_blank">UH West O&#699;ahu</a></li>
-                        <li><a href="http://windward.hawaii.edu/brainfuse/" target="_blank">Windward CC</a></li>
-                    </ul>
-        </section>
-      </div>
-    </div>
-    <div class="parallax p4">
+        <div class="parallax p4">
         <div class="row demo-tiles">
             <section>
         <div class="col-md-4 col-xs-12">
@@ -149,7 +89,7 @@
             <img src="img/icons/svg/compas.svg" alt="Compas" class="tile-image big-illustration">
             <h3 >Computers and Disabilities</h3>
             <p>UH departments considering distance delivery of a new or existing academic program should refer to specific procedures for their campus as outlined</p>
-            <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Learn More</a>
+            <a class="btn btn-primary btn-large btn-block">Learn More</a>
           </div>
         </div>
         <div class="col-md-4 col-xs-12">
@@ -172,26 +112,8 @@
         </div>
       </section>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <h1>Distance Learning Delivery Methods</h1>
-      </div>
-          <div class="col-md-4 col-sm-12">
-          <h2>Cable</h2>
-          <p>Cable allows students to take cable courses in the convenience of their home. Courses are either live or pre-recorded. In most cable courses, there will be an online component for outside class communication, material distribution and assignments.</p>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <h2>Interactive Video (ITV)</h2>
-          <p>ITV allows students to take a course from one location while the instructor teaches from another. Class meetings are held at a specific time and place (synchronous). Both instructor and students can see and hear each other, simulating a face-to-face class environment. In most ITV courses, there will be an online component for outside class communication, material distribution and assignments.</p>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <h2>Online</h2>
-            <p>The Internet allows students to take a course from home using a personal computer. Depending on the online course, students may be required to log in at a specific day and time (synchronous) or at anytime (asynchronous).</p>
-        </div>
-      </div>
-    </div>
-   <?php include_once('footer.php');?> 
+</div>
+   <?php include_once('resources/templates/footer.php');?> 
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->

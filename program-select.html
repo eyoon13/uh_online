@@ -1,7 +1,7 @@
 <?php
 $_courseID = $_POST['course_dropdown'];
-echo($_courseID);
-
+$_fName = $_POST['first_name'];
+$_lName =$_POST['last_name'];
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +16,8 @@ echo($_courseID);
     <meta name="author" content="">
 
     <title>Distance Learning at University of Hawaii</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,11 +25,10 @@ echo($_courseID);
 
   <link href="css/old-styles.css" rel="stylesheet">
     <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles-chasek.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <script src="js/parallax.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,10 +40,10 @@ echo($_courseID);
 
 <body data-spy="scroll" data-target=".bd-sidenav-active">
   <header>
-   <?php include_once('header.php'); ?>
- </header>
+   <?php include_once('resources/templates/header.php'); ?>
+  </header>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -61,13 +62,65 @@ Phone: (808) 455-0348</br>
 Email: tinaplee@hawaii.edu</br>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">More information about this program</button>
-                    <button type="button" class="btn btn-primary">Apply to this program</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Apply to this program</button>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Modal -->
+
+            <!-- Modal2 -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form-group>
+                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+                        <div class="col-md-12">
+                          <h1>Please fill out this form to receive more information</h1>
+                        </div>
+                      </div>
+                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+                        <div class="col-md-6">
+                          <input type="text" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+                        <div class="col-md-12">
+                          <input type="text" value="" placeholder="Email" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+                        <div class="col-md-12">
+                           <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+                        </div>
+                      </div>
+                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+                        <div class="col-md-12">
+                          <button id="buttonB" value="A" data-dismiss="modal" class="btn btn-danger">Submit</button>
+                          <button type="button" data-dismiss="modal" class="btn btn-primary">Cancel</button>
+                        </div>
+                      </div>
+                    </form-group>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <!-- Modal 3-->    
+      <div class="modal fade" id="approvedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h1>Email Received</h1>
+              <h2><button data-dismiss="modal" class="btn btn-danger">Dismiss</button></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
                 <h3>Certificate Programs</h3>
@@ -234,7 +287,29 @@ Email: tinaplee@hawaii.edu</br>
                 </div>
               </div>
         </div>
-<?php include_once('footer.php'); ?>
+  <div class="parallax p2" id="section-2">
+    <hgroup>
+      <form id="info_form_1">
+         <div class="col-md-12">
+        <h1>Please fill out this form to recieve more information</h1>
+        </div>
+        <div class="form-group col-md-6">
+       <input type="text" name="first_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
+     </div>
+     <div class="form-group col-md-6">
+       <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
+     </div>
+     <div class="form-group col-md-12">
+       <input type="text" name="email" placeholder="Email" class="form-control">
+     </div>
+     <div class="form-group col-md-12">
+       <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
+     </div>
+      <h2 class="col-md-12"><button type="submit" form="info_form" id="gen_info" va class="btn btn-danger">Submit</button></h2>
+      </form>
+    <hgroup>
+  </div>
+        <?php include_once('resources/templates/footer.php'); ?>
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -242,12 +317,7 @@ Email: tinaplee@hawaii.edu</br>
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
-    <script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-
-    })
-    </script>
+    <script src="js/program-select.js"></script>
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
     </script>

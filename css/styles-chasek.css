@@ -70,6 +70,7 @@ body {
     top: 50%;
     left: 50%;
 }*/
+/* DISABLED TO MAKE MODAL2 WORK [CHASEK]
 body.modal-open .modal {
     display: flex !important;
     height: 50%;
@@ -78,6 +79,7 @@ body.modal-open .modal {
 body.modal-open .modal .modal-dialog {
     margin: auto;
 }
+*/
 
 .cell {
   max-width: 100px;
@@ -224,13 +226,13 @@ li.active > a.nav-button {
   color: #fff;
 }
 .parallax.p2 {
-  background: url("https://www.hawaii.edu/dl/images/whatservicesareavailable002.jpg") no-repeat fixed 70% 0;
+  background: url(../images/img2.jpg) no-repeat fixed 50% 0;
   background-size: cover;
   color: #fff;
 }
 .parallax.p3 {
   /*background: url("http://www.uhwo.hawaii.edu/default/assets/Image/chancellor/2014FallGovernmentCaseChallengeAwardRecipients-1.jpg") no-repeat fixed 70% 0;*/
-  background:url(../images/img2.jpg) no-repeat fixed 50% 0;
+  background: url("https://www.hawaii.edu/dl/images/whatservicesareavailable002.jpg") no-repeat fixed 70% 0;
   background-size: cover;
   color: #fff;
   }
@@ -398,11 +400,6 @@ footer p {
         width: 100%;
     }
 }
-
-.error {
-  color: #FF0000;
-}
-
 
 
 /* Blank lines for ease and view */

@@ -71,14 +71,14 @@
           <div class="col-md-12">
     <div><h2>What are your interests?</h2></div>
         <div><p>Let us Help you!  Please enter your information below.</p></div>
+   <form method="POST" action="program-select.html">
     <div class="form text-center">
-            <div class="form-group col-md-4">
-           <input type="text" value="" placeholder="First Name" class="form-control" />
-         </div>
-         <div class="form-group col-md-4">
-           <input type="text" value="" placeholder="Last Name" class="form-control" />
-         </div>
-  <form method="POST" action="program-select.html">
+        <div class="form-group col-md-4">
+           <input type="text" value="" name="first_name" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="form-group col-md-4">
+           <input type="text" value="" name="last_name" placeholder="Last Name" class="form-control" />
+        </div>
     <select name="course_dropdown" id="course_dropdown" class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
       <option value="0" selected="selected">General Interest</option>
       <option value="1">Accounting &amp; Finance</option>
@@ -108,11 +108,10 @@
       <option value="25">Social Sciences</option>
       <option value="26">Sport Management &amp; Athletic Admin</option>
     </select>
-    <input type="submit" value="submit"/>
-  </form>
     <div class="col-md-12 text-center">
-        <a href="" id="ddButton"class="btn btn-sm btn-danger starting2">What Programs Are Available</a>
+      <input type="submit" class="btn btn-sm btn-danger starting2" value="What Programs Are Available"/>
     </div>
+  </form>
     </div>
 
   </div>
