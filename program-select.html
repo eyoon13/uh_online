@@ -1,5 +1,5 @@
 <?php
-$_courseID = $_POST['course_dropdown'];
+$_courseID = $_POST['buttonB'];
 $_fName = $_POST['first_name'];
 $_lName =$_POST['last_name'];
 ?>
@@ -63,7 +63,8 @@ Email: tinaplee@hawaii.edu</br>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-primary">Apply to this program</button>
+                    <button type="button" data-dismiss="modal" id="apply" class="btn btn-primary">Apply to this program</button>
+                    <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
                   </div>
                 </div>
               </div>
@@ -74,7 +75,7 @@ Email: tinaplee@hawaii.edu</br>
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <form-group>
+                    <form id="form_2" method="post" action="hello.php">
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
                           <h1>Please fill out this form to receive more information</h1>
@@ -82,15 +83,15 @@ Email: tinaplee@hawaii.edu</br>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-6">
-                          <input type="text" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+                          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
                         </div>
                         <div class="col-md-6">
-                          <input type="text" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+                          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
-                          <input type="text" value="" placeholder="Email" class="form-control" />
+                          <input type="text" value="" name="email" placeholder="Email" class="form-control" />
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
@@ -100,11 +101,11 @@ Email: tinaplee@hawaii.edu</br>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
-                          <button id="buttonB" value="A" data-dismiss="modal" class="btn btn-danger">Submit</button>
-                          <button type="button" data-dismiss="modal" class="btn btn-primary">Cancel</button>
+                          <button type="submit" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
+                          <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
                         </div>
                       </div>
-                    </form-group>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -289,7 +290,7 @@ Email: tinaplee@hawaii.edu</br>
         </div>
   <div class="parallax p2" id="section-2">
     <hgroup>
-      <form id="info_form_1">
+      <form id="info_form_1" method="post" action="hello.php">
          <div class="col-md-12">
         <h1>Please fill out this form to recieve more information</h1>
         </div>
@@ -300,12 +301,14 @@ Email: tinaplee@hawaii.edu</br>
        <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
      </div>
      <div class="form-group col-md-12">
-       <input type="text" name="email" placeholder="Email" class="form-control">
+       <input type="email" name="email" placeholder="Email" class="form-control" required>
      </div>
      <div class="form-group col-md-12">
        <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
      </div>
-      <h2 class="col-md-12"><button type="submit" form="info_form" id="gen_info" va class="btn btn-danger">Submit</button></h2>
+      <h2 class="col-md-12">
+        <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
+      </h2>
       </form>
     <hgroup>
   </div>
