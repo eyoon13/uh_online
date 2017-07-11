@@ -25,6 +25,6 @@
               </li>
               <li><a href="https://www.hawaii.edu/dl/courses/">Courses</a></li>
               <li><a href="https://laulima.hawaii.edu/portal">Laulima</a></li>
-              <li><a href="https://myuh.hawaii.edu/">MyUH</a></li>
+              <li><a href="https://myuh.hawaii.edu/collection/all/distance-learning-links">MyUH</a></li>
              </ul>
           </div><!-- /.navbar-collapse -->

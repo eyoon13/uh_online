@@ -35,42 +35,16 @@
 <body>  
 
  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+ 
+    <header>
+      <?php include_once('resources/templates/header.php'); ?>
+    </header>
 
-    <nav class="navbar navbar-lg navbar-inverse" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-              <span class="sr-only">Toggle navigation</span>
-            </button>
-            <a class="navbar-brand uh-branding-one" href="index.html">Distance Learning @ UH</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-01">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a Program<b class="caret"></b></a>
-                <span class="dropdown-arrow"></span>
-                <ul class="dropdown-menu">
-                  <li><a href="program-select.html">All Programs</a></li>
-                  <li class="divider"></li>
-                <li><a href="program-select1.html">Certificate Programs</a></li>
-                <li><a href="program-select2.html">AA Programs</a></li>
-                <li><a href="program-select3.html">BA Programs</a></li>
-                <li><a href="#">Post-Baccalaureate</a></li>
-                <li><a href="#">Graduate Certificate</a></li>
-                <li><a href="#">Master Degree</a></li>
-                <li><a href="#">Doctoral Degree</a></li>
-                </ul>
-              </li>
-              <li><a href="https://www.hawaii.edu/dl/courses/">Courses</a></li>
-              <li><a href="https://laulima.hawaii.edu/portal">Laulima</a></li>
-              <li><a href="https://myuh.hawaii.edu/">MyUH</a></li>
-             </ul>
-          </div><!-- /.navbar-collapse -->
-        </nav>
     <div class="parallax p5" id="section-1">
     <div class="col-md-12 panel2">
           <div class="col-md-12">
     <div><h2>What are your interests?</h2></div>
-        <div><p>Let us Help you!  Please enter your information below.</p></div>
+        <div><p>Let us help you!  Please enter your information below.</p></div>
    <form method="POST" action="program-select.html">
     <div class="form text-center">
         <div class="form-group col-md-4">
@@ -217,7 +191,7 @@
 
 
     </div>
-<?php include_once('footer.php'); ?>
+   <?php include_once('resources/templates/footer.php');?> 
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->

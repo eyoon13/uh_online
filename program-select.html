@@ -62,7 +62,8 @@ Phone: (808) 455-0348</br>
 Email: tinaplee@hawaii.edu</br>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+                    <input type="hidden" id="course_value" value="AAAAAAAA">
+                    <button type="button" id="more_info_btn" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
                     <button type="button" data-dismiss="modal" id="apply" class="btn btn-primary">Apply to this program</button>
                     <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
                   </div>
@@ -91,12 +92,12 @@ Email: tinaplee@hawaii.edu</br>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
-                          <input type="text" value="" name="email" placeholder="Email" class="form-control" />
+                          <input type="email" name="email" placeholder="Email" class="form-control" required>
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="col-md-12">
-                           <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+                        <div class="form-group col-md-12">
+                          <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
@@ -290,7 +291,7 @@ Email: tinaplee@hawaii.edu</br>
         </div>
   <div class="parallax p2" id="section-2">
     <hgroup>
-      <form id="info_form_1" method="post" action="hello.php">
+      <form id="info_form_1" method="post" action="process.php">
          <div class="col-md-12">
         <h1>Please fill out this form to recieve more information</h1>
         </div>
@@ -300,12 +301,12 @@ Email: tinaplee@hawaii.edu</br>
      <div class="form-group col-md-6">
        <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
      </div>
-     <div class="form-group col-md-12">
-       <input type="email" name="email" placeholder="Email" class="form-control" required>
+     <div class="form-group col-md-12" id="email-group">
+       <input type="email" id="genEmail" placeholder="Email" class="form-control" required>
      </div>
-     <div class="form-group col-md-12">
-       <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
-     </div>
+      <div class="form-group col-md-12">
+        <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+      </div>
       <h2 class="col-md-12">
         <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
       </h2>
