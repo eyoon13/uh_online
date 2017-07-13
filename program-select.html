@@ -24,11 +24,11 @@ $_lName =$_POST['last_name'];
     <!-- Custom CSS -->
 
   <link href="css/old-styles.css" rel="stylesheet">
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/styles-chasek.css" rel="stylesheet">
+  <link href="css/flat-ui.css" rel="stylesheet">
+  <link href="css/styles-chasek.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,76 +43,21 @@ $_lName =$_POST['last_name'];
    <?php include_once('resources/templates/header.php'); ?>
   </header>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    <h5 class="modal-title" id="exampleModalLabel">Accounting (ABC)</h5>
-                  </div>
-                  <div class="modal-body">
-                      Designed to provide workforce skills to Liberal Arts students while earning their AA degree. Students taking these courses will also be able to enter the workforce after receiving their AA and can continue to work while pursuing a bachelor's degree.</br></br>
-  The Academic Subject Certificate in Accounting will provide students with an opportunity to focus their elective studies on acquiring accounting skills. Students interested in exploring accounting as a possible major at a four-year institution can take these courses while earning their AA degree. Students also will have the opportunity to show potential employers they have accounting skills improving their chances of getting an accounting clerk position. Students holding this certificate will also be able to present themselves as receiving specialized training in accounting, which will greatly enhance their employment potential and admission into four-year business programs. </br></br>
-  Degree Awarded: Academic Subject Certificate</br></br>
-URL: http://www.leeward.hawaii.edu/asc-acct</br></br>
-Contact: Tina Lee</br>
-Phone: (808) 455-0348</br>
-Email: tinaplee@hawaii.edu</br>
-                  </div>
-                  <div class="modal-footer">
-                    <input type="hidden" id="course_value" value="AAAAAAAA">
-                    <button type="button" id="more_info_btn" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
-                    <button type="button" data-dismiss="modal" id="apply" class="btn btn-primary">Apply to this program</button>
-                    <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
+      <div class="modal-dialog modal-lg" role="document">
+        <?php include('resources/modals/modalAcc.html'); ?>
+      </div>
+    </div>
 
             <!-- Modal2 -->
-      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <form id="form_2" method="post" action="hello.php">
-                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="col-md-12">
-                          <h1>Please fill out this form to receive more information</h1>
-                        </div>
-                      </div>
-                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="col-md-6">
-                          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
-                        </div>
-                        <div class="col-md-6">
-                          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="col-md-12">
-                          <input type="email" name="email" placeholder="Email" class="form-control" required>
-                        </div>
-                      </div>
-                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="form-group col-md-12">
-                          <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-                        <div class="col-md-12">
-                          <button type="submit" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
-                          <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
+        <div class="modal-dialog modal-lg" role="document">
+          <?php include('resources/modals/formA.html'); ?>
+        </div>
+      </div>
+
       <!-- Modal 3-->    
-      <div class="modal fade" id="approvedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+      <div class="modal fade" id="approvedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-body">
@@ -120,6 +65,12 @@ Email: tinaplee@hawaii.edu</br>
               <h2><button data-dismiss="modal" class="btn btn-danger">Dismiss</button></h2>
             </div>
           </div>
+        </div>
+      </div>
+<!-- Acc CA-->    
+      <div class="modal fade" id="acc_CA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+        <div class="modal-dialog modal-lg" role="document">
+          <?php include('resources/modals/modalCA.html'); ?>
         </div>
       </div>
 
@@ -151,7 +102,7 @@ Email: tinaplee@hawaii.edu</br>
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a href="#0" data-toggle="modal" data-target="#myModal">Accounting (CA)</a>
+                    <a href="#0" data-toggle="modal" data-target="#acc_CA">Accounting (CA)</a>
                   </div>
                   <div class="cell">
                     Leeward Community College
@@ -292,26 +243,27 @@ Email: tinaplee@hawaii.edu</br>
   <div class="parallax p2" id="section-2">
     <hgroup>
       <form id="info_form_1" method="post" action="process.php">
-         <div class="col-md-12">
-        <h1>Please fill out this form to recieve more information</h1>
+        <div class="col-md-12">
+          <h1>Please fill out this form to recieve more information</h1>
         </div>
         <div class="form-group col-md-6">
-       <input type="text" name="first_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
-     </div>
-     <div class="form-group col-md-6">
-       <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
-     </div>
-     <div class="form-group col-md-12" id="email-group">
-       <input type="email" id="genEmail" placeholder="Email" class="form-control" required>
-     </div>
-      <div class="form-group col-md-12">
-        <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
-      </div>
-      <h2 class="col-md-12">
-        <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
-      </h2>
+          <input type="text" name="first_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
+        </div>
+        <div class="form-group col-md-12" id="email-group">
+          <input type="email" name="email" placeholder="Email" class="form-control" required>
+        </div>
+        <div class="form-group col-md-12">
+          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+        </div>
+        <h2 class="col-md-12">
+          <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
+        </h2>
       </form>
     <hgroup>
+     <div class="filler"></div> 
   </div>
         <?php include_once('resources/templates/footer.php'); ?>
   </body>
@@ -321,7 +273,9 @@ Email: tinaplee@hawaii.edu</br>
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
+    <script src="js/magic.js"></script>
     <script src="js/program-select.js"></script>
+    <script src="js/set-height.js"></script>
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
     </script>

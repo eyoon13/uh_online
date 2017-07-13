@@ -1,34 +1,36 @@
 <?php
 // process.php
 
-	$errors = array();
-	$data 	= array();
+$errors         = array();      // array to hold validation errors
+$data           = array();      // array to pass back data
 
-// validate the variables 
-	// if any of the variables don't exist, add them to error array.
+// validate the variables ======================================================
+    // if any of these variables don't exist, add an error to our $errors array
 
-	if(empty($_POST['email']))
-		$errors['email'] = 'Email Required';
+    if (empty($_POST['email']))
+        $errors['email'] = 'Email is required.';
 
-	// return a response
-		// if there are errors in our errors array, return a success boolean of false.
-		if (! empty($errors)){
 
-			// if there are errors in the array, return those errors
-			$data['success'] = false;
-			$data['errors']  = $errors;
-		} else{
+// return a response ===========================================================
 
-			// if there are no errors process our form, then return a message
+    // if there are any errors in our errors array, return a success boolean of false
+    if ( ! empty($errors)) {
 
-			//PROCESSING GOES HERE
-			//(LOGIN, SAVE, UPDATE)
+        // if there are items in our errors array, return those errors
+        $data['success'] = false;
+        $data['errors']  = $errors;
+    } else {
 
-			$data['success'] = true;
-			$data['message'] = 'Success';
-		}
+        // if there are no errors process our form, then return a message
 
-	// return all our data to an AJAX call
-	echo json_encode($data);
+        // DO ALL YOUR FORM PROCESSING HERE
+        // THIS CAN BE WHATEVER YOU WANT TO DO (LOGIN, SAVE, UPDATE, WHATEVER)
 
-?>
+        // show a message of success and provide a true success variable
+        $data['success'] = true;
+        $data['message'] = 'Success!';
+    }
+
+    // return all our data to an AJAX call
+    echo json_encode($data);
+
