@@ -1,3 +1,18 @@
+<?php
+  if(! empty($_POST['buttonB'])){
+    $_courseID = $_POST['buttonB'];
+  }else{$_courseID ="";}
+  if(! empty($_POST['first_name'])){
+    $_fName = $_POST['first_name'];
+  }else{$_fName ="";}
+  if(! empty($_POST['last_name'])){
+    $_lName =$_POST['last_name'];
+  }else{$_lName ="";}
+  if(! empty($_POST['course_dropdown'])){
+    echo($_POST['course_dropdown']);
+  }else{$_valueDropdown ="";}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,12 +54,27 @@
       <?php include_once('resources/templates/header.php'); ?>
     </header>
 
-<!--Accounting Modal-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
+<!-- Acc AA Modal-->    
+      <div class="modal fade" id="acc_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
         <div class="modal-dialog modal-lg" role="document">
-            <?php include('resources/modals/modalAcc.html'); ?>
+          <?php include('resources/modals/acc_AA.html'); ?>
         </div>
-    </div>
+</div>
+
+<!-- Liberal Arts AA Modal-->    
+      <div class="modal fade" id="la_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+        <div class="modal-dialog modal-lg" role="document">
+          <?php include('resources/modals/la_AA.html'); ?>
+        </div>
+</div>
+
+
+<!-- Teaching AA Modal-->    
+      <div class="modal fade" id="teach_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+        <div class="modal-dialog modal-lg" role="document">
+          <?php include('resources/modals/teach_AA.html'); ?>
+        </div>
+</div>
 
 
 <!-- Form Modal-->
@@ -63,7 +93,12 @@
                     Subject
                   </div>
                   <div class="cell">
-                    Offering Campus
+                    Online
+                  </div>
+                </div>
+                <div class="row-table">
+                  <div class="cell">
+                    <a data-toggle="modal" data-target="#acc_AA">Accounting</a>
                   </div>
                   <div class="cell">
                     Online
@@ -71,10 +106,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a data-toggle="modal" data-target="#myModal">Accounting</a>
-                  </div>
-                  <div class="cell">
-                    Leeward Community College
+                    <a data-toggle="modal" data-target="#la_AA">Libral Arts</a>
                   </div>
                   <div class="cell">
                     Online
@@ -82,21 +114,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a>Liberal Arts</a>
-                  </div>
-                  <div class="cell">
-                    Leeward Community College
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a>Teaching</a>
-                  </div>
-                  <div class="cell">
-                    Leeward Community College
+                    <a data-toggle="modal" data-target="#teach_AA">Teaching</a>
                   </div>
                   <div class="cell">
                     Online
@@ -108,29 +126,29 @@
         </div>
 
   <div class="parallax p2" id="section-2">
-    <hgroup>
+    <hgroup id="form_group">
       <form id="info_form_1" method="post" action="process.php">
         <div class="col-md-12">
           <h1>Please fill out this form to recieve more information</h1>
         </div>
         <div class="form-group col-md-6">
-          <input type="text" name="first_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
+          <input type="text" name="f_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
         </div>
         <div class="form-group col-md-6">
-          <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
+          <input type="text" name="l_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
         </div>
         <div class="form-group col-md-12" id="email-group">
           <input type="email" name="email" placeholder="Email" class="form-control" required>
         </div>
         <div class="form-group col-md-12">
-          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+          <textarea class="form-control" name="question" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
         </div>
+          <input type="hidden" name="campus_mail" value="">
         <h2 class="col-md-12">
           <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
         </h2>
       </form>
     <hgroup>
-     <div class="filler"></div> 
   </div>
 
       <?php include_once('resources/templates/footer.php');?> 
@@ -142,12 +160,7 @@
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
     <script src="js/program2.js"></script>
-    <script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-
-    })
-    </script>
+    <script src="js/magic.js"></script>
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
     </script>

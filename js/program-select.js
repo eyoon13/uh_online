@@ -2,11 +2,6 @@ $(document).ready(function () {
 
 	$(".dropdown-toggle").dropdown();
 
-	$('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus();
-
-    });
-
     $('#myModal2').on('shown.bs.modal', function(event){
       var button = $(event.relatedTarget);
       var obj = button.val();
@@ -14,26 +9,8 @@ $(document).ready(function () {
       modal.find('#course_code').val(obj);
     });
 
-    $('#buttonB').click(function(){
-    	var val = $('#buttonB').val();
-    	$('#course_code').val(val);
-    	$.ajax({
-    		type: "POST",
-    		url: "hello.php",
-    		data: $('form.form_2').serialize(),
-    			success: function(msg){
-    				$('#myModal2').modal('hide');
-    				$('#approvedModal').modal('toggle');
-    				return false;
-    			},
-   			error: function(){
-   				alert("failure");
-   			}
-    	});
-
-    });
-
     $('#apply').click(function(){
+    	console.log('hello');
     	$('#myModal').modal('toggle');
     	setTimeout(function(){
     		window.location.href='https://www.sis.hawaii.edu/uhdad/bwskalog.P_DispLoginNon';
@@ -41,4 +18,25 @@ $(document).ready(function () {
 
     });
 
+    $('#trigger').click(function(){
+      $('#dialog').dialog();
+    }); 
+
+	$('#form_2').submit(function(event) {
+    	console.log('hello');	
+    });
+
+    $('#acc_modal').click(function(e){
+    	$('.modal-container').load('resources/modals/modalAcc.html',function(result){
+    		$('#mymodal').modal({show:true});
+    	});
+   	});
+
+    $('#ca_modal').click(function(e){
+    	$('#stud').load('resources/modals/modalCA.html','#acc_CA');
+    	console.log($('#stud'));
+    		$('#stud').modal('toggle');
+    });
 });
+
+

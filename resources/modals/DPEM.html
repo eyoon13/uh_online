@@ -1,0 +1,25 @@
+<?php
+  $url = "http://www.uhwo.hawaii.edu/academics/degrees-and-certificates/bachelor-of-arts-in-public-administration/disaster-preparedness-emergency-management/";
+  $code="DPEM_CODE";
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+        </button>
+          <h5 class="modal-title" id="exampleModalLabel">Disaster Preparedness and Emergency Management (DPEM)</h5>
+            </div>
+              <div class="modal-body">
+                Completion of the 18-credit cluster of courses will lead to a Certificate in Disaster Preparedness and Emergency Management (DPEM). These courses meet the national standards established by the United States Department of Homeland Security (DHS) and the Federal Emergency Management Agency (FEMA) Higher Education project. The goal of this Certificate is to provide DPEM practitioners with a broad range of administrative skills and knowledge that are ideally suited to meet the critical needs of DPEM administrators.</br></br>
+                Degree Awarded: Certificate of Competence</br></br>
+                URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+                Contact: Dr. Ross Prizzia</br>Phone: (808) 689-2365</br>Email: rprizzia@hawaii.edu
+              </div>
+            <div class="modal-footer">
+          <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+        <button type="button" data-dismiss="modal" id="apply" class="btn btn-primary">Apply to this program</button>
+      <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
+    </div>
+  </div>
+</div>

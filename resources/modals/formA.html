@@ -1,9 +1,9 @@
 <div class="modal-content">
                   <div class="modal-body">
-                    <form id="form_2" method="post" action="hello.php">
+                    <form id="form_2" method="post" action="process.php">
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
-                          <h1>Please fill out this form to receive more information</h1>
+                          <h1>Please fill out this form to recieve more information</h1>
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
@@ -21,12 +21,13 @@
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="form-group col-md-12">
+                          <input type="hidden" id="campus_email" value="">
                           <input type="text" id="course_code" name="course_code" value="" placeholder="Course Code" class="form-control" />
                         </div>
                       </div>
                       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
                         <div class="col-md-12">
-                          <button type="submit" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
+                          <button type="submit" form="form_2" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
                           <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
                         </div>
                       </div>

@@ -10,18 +10,19 @@
     <meta name="author" content="">
 
     <title>Distance Learning at University of Hawaii</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
 
-	<link href="css/old-styles.css" rel="stylesheet">
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <link href="css/old-styles.css" rel="stylesheet">
+  <link href="css/flat-ui.css" rel="stylesheet">
+  <link href="css/styles-chasek.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<script src="js/parallax.js"></script>
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,36 +33,16 @@
 </head>
 
 <body data-spy="scroll" data-target=".bd-sidenav-active">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <header>
       <?php include_once('resources/templates/header.php'); ?>
     </header>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    <h5 class="modal-title" id="exampleModalLabel">Accounting (ABC)</h5>
-                  </div>
-                  <div class="modal-body">
-                      Designed to provide workforce skills to Liberal Arts students while earning their AA degree. Students taking these courses will also be able to enter the workforce after receiving their AA and can continue to work while pursuing a bachelor's degree.</br></br>
-  The Academic Subject Certificate in Accounting will provide students with an opportunity to focus their elective studies on acquiring accounting skills. Students interested in exploring accounting as a possible major at a four-year institution can take these courses while earning their AA degree. Students also will have the opportunity to show potential employers they have accounting skills improving their chances of getting an accounting clerk position. Students holding this certificate will also be able to present themselves as receiving specialized training in accounting, which will greatly enhance their employment potential and admission into four-year business programs. </br></br>
-  Degree Awarded: Academic Subject Certificate</br></br>
-URL: http://www.leeward.hawaii.edu/asc-acct</br></br>
-Contact: Tina Lee</br>
-Phone: (808) 455-0348</br>
-Email: tinaplee@hawaii.edu</br>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">More information about this program</button>
-                    <button type="button" class="btn btn-primary">Apply to this program</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
+      <div class="modal-dialog modal-lg" role="document">
+        <?php include('resources/modals/modalAcc.html'); ?>
+      </div>
+    </div>
             <!-- Modal -->
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
@@ -154,16 +135,12 @@ Email: tinaplee@hawaii.edu</br>
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/set-height.js"></script>
       <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
-    <script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-
-    })
-    </script>
+    <script src="js/program-select3.js"></script>
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
     </script>

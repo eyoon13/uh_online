@@ -16,5 +16,4 @@ $(document).ready(function () {
       modal.find('#course_code').val(obj);
     });
 
-
 });

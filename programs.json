@@ -1,0 +1,67 @@
+[{
+	"name": "Accounting (ABC)",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "myModal"
+}, {
+	"name": "Accounting (CA)",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "acc_CA"
+}, {
+	"name": "Administrative Support Hospitality and Legal",
+	"college": "LA",
+	"value": ["15"],
+	"level": "CERT",
+	"modal": "ASHL"
+}, {
+	"name": "Disaster Preparedness and Emergency Management(DPEM)",
+	"college": "LA",
+	"value": ["24"],
+	"level": "CERT",
+	"modal": "myModal"
+}, {
+	"name": "Accounting",
+	"college": "LA",
+	"value": ["1"],
+	"level": "AA",
+	"modal": "myModal"
+}, {
+	"name": "Libral Arts",
+	"college": "LA",
+	"value": ["17"],
+	"level": "AA",
+	"modal": "myModal"
+}, {
+	"name": "Teaching",
+	"college": "LA",
+	"value": ["17"],
+	"level": "AA",
+	"modal": "myModal"
+}, {
+	"name": "Business Administration, General Business Administration",
+	"college": "LA",
+	"value": ["3"],
+	"level": "BA",
+	"modal": "myModal"
+}, {
+	"name": "Business Administration, Accounting",
+	"college": "LA",
+	"value": ["1", "3"],
+	"level": "BA",
+	"modal": "myModal"
+}, {
+	"name": "Business Administration, Hospitality and Tourism",
+	"college": "LA",
+	"value": ["17", "3"],
+	"level": "BA",
+	"modal": "myModal"
+}, {
+	"name": "Business Administration, Marketing",
+	"college": "LA",
+	"value": ["18", "3"],
+	"level": "BA",
+	"modal": "myModal"
+}]

@@ -1,0 +1,25 @@
+<?php
+  $url="http://www.leeward.hawaii.edu/bt-ca";
+  $code="ASHL_CODE";
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+        </button>
+          <h5 class="modal-title" id="exampleModalLabel">Administrative Support Hospitality and Legal</h5>
+            </div>
+              <div class="modal-body">
+                The goal of the certificate is to train personnel to meet the needs of entry-level clerical/administrative positions public and private organizations.</br></br>
+                Degree Awarded: Certificate of Competence</br>
+                URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+                Contact: Kay Ono</br>Phone: (808) 455-0223</br>Email: kayono@hawaii.edu
+              </div>
+            <div class="modal-footer">
+          <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+        <button type="button" data-dismiss="modal" id="apply" class="btn btn-primary">Apply to this program</button>
+      <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<?php
+  $url="http://www.uhwo.hawaii.edu/academics/degrees-and-certificates/bachelor-of-arts-in-business-administration/hospitality-and-tourism/";
+  $code="BAHT(BA)";
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="exampleModalLabel">Business Administration, Hospitality and Tourism</h5>
+  </div>
+  <div class="modal-body">
+    To meet the educational needs of students who reside on the neighbor islands, this baccalaureate program delivered through Distance Learning has been established as a transfer program for students who have completed the first two years of course work (freshman and sophomore) from a neighbor island community college in the UH system.  Students enrolled in this program will be assigned faculty advisors to help with academic planning.</br></br>The Bachelor of Arts in Business Administration with a concentration in Hospitality and Tourism at UH West Oʻahu is designed to provide students with a comprehensive understanding of the skills necessary to manage operations in large and small hospitality and tourism related businesses including hotels, restaurants, food service, airlines, travel agencies, events and attractions and more.</br></br>
+    Degree Awarded: Bachelor of Arts (BA)</br>
+    URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+    Contact: Dr. Derrek Choy</br>Phone: (808) 689-2332</br>Email: derrekc@hawaii.edu
+  <div class="modal-footer">
+    <input type="hidden" id="course_value">
+    <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+    <button type="button" data-dismiss="modal" id="apply2" class="btn btn-primary">Apply to this program</button>
+    <button data-dismiss="modal" id="dismiss" class="btn btn-danger">Dismiss</button>
+  </div>
+</div>
+</div>
