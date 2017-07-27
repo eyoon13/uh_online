@@ -1,9 +1,6 @@
 // magic.js
 $(document).ready(function() {
 
-	$('#info_form_1').submit(function(event){
-	});
-
     // process the form
     $('#info_form_1').submit(function(event) {
     	event.preventDefault(); // Prevent Default Submission

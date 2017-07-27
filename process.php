@@ -1,7 +1,5 @@
 <?php
-
 // process.php
-    	echo($_POST['info']);
 //$errors;      // array to hold validation errors
 //$data;      // array to pass back data
 
@@ -12,10 +10,6 @@
 
 
 // Check to see if name was filled out ======================================================
-    if (! empty($_POST['first_name']) && ! empty($_POST['last_name'])){	
-    	$first_name = $_POST['first_name'];
-    	$last_name  = $_POST['last_name'];
-    }
 
     if (! empty($_POST['sender'])){
     	$to     = 'AAAAA';
@@ -37,19 +31,21 @@
 
         // DO ALL YOUR FORM PROCESSING HERE
         // THIS CAN BE WHATEVER YOU WANT TO DO (LOGIN, SAVE, UPDATE, WHATEVER)
-    	$reply_to      = $_POST['email']; // Email of person requesting information.
     	$question      = $_POST['info'];
-    	$name          = $first_name." ".$last_name;
+    	$first_name    = $_POST['first_name'];
+    	$last_name     = $_POST['last_name'];
 
     	// create the email
-    	$email_subject = "$name requests for more info";
     	$email_body    = "Here is the message: \n $question";
-    	$from          = ""; // Servers email address.
-    	$to            = ""; //Email of UH staff who will recieve all incoming submissions.
+    	$from          = $_POST['email']; // Servers email address.
+    	$to            = "t6754177@gmail.com"; //Email of UH staff who will recieve all incoming submissions.
+    	$subject = "Form submission";
+    	$subject2 = "Copy of your form submission";
+    	$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $question;
+    	$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $question;
 
-    	mail($to,$email_subject,$question);
-
-
+    	$headers = "From:" . $from;
+        mail($to,$subject,$message,$headers);
         // show a message of success and provide a true success variable
         $data['success'] = true;
         $data['from']   = $_POST['email'];

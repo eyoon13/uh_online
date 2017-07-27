@@ -9,6 +9,9 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto';
 }
+.blue{
+  background-color:#42e5f4;
+}
 
 /* table design */
 .wrapper-table {
@@ -66,9 +69,7 @@ body {
     margin-top:-50px;
 }
 /*.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
 }*/
 /* DISABLED TO MAKE MODAL2 WORK [CHASEK]
 body.modal-open .modal {
@@ -295,6 +296,14 @@ hgroup{
   padding-top: 30px;
   padding-bottom: 15px;
   min-height: 500px;
+}
+.form_row{
+  width: 90%;
+  padding-left: 5%;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  min-height: 500px;
+
 }
 .row:after {
   content: "";

@@ -1,0 +1,43 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="exampleModalLabel">Banner Account Creation Form</h5>
+  </div>
+  <div class="modal-body">
+    <form id="form_b" method="post" action="">
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-6">
+          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-12">
+          <input type="text" name="app" placeholder="Application Type" class="form-control">
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-6">
+          <input type="text" id="campus_value" value="" placeholder="Campus to be Attended" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+            <option value="fall">Fall</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="ext">Extension</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-12">
+          <button type="submit" form="form_2" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
+          <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+<?php include_once('table_builder.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,128 +36,129 @@
 
 <body>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-    <header>
-      <?php include_once('resources/templates/header.php'); ?>
-    </header>
+  <header>
+   <?php include_once('resources/templates/header.php'); ?>
+  </header>
+  <?php include_once('resources/modals.html'); ?>
 
     <div class="parallax p7" id="section-1">
     <div class="col-md-12 panel2">
           <div class="col-md-12">
 		<div><h2>Let's See How We Can help You!</h2></div>
         <div><p>Please enter your information below.</p></div>
-		<div class="form text-center">
-            <div class="form-group col-md-6">
-           <input type="text" value="" placeholder="Where did you Last Attend?" class="form-control" />
-         </div>
-         <div class="form-group col-md-6">
-             <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
-               <option value="" selected="selected">How Many Years Ago?</option>
-               <option value="1">1-5 years</option>
-               <option value="2">6-10 years</option>
-               <option value="3">10-15 years</option>
-               <option value="4">More than 15</option>
-             </select>
-         </div>
-         <div class="col-md-12"><p>Check below for Programs you may be interested.</p></div>
-		</div>
-	</div>
-</div>
-    </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            <h5 class="modal-title" id="exampleModalLabel">Accounting (ABC)</h5>
-          </div>
-          <div class="modal-body">
-              Designed to provide workforce skills to Liberal Arts students while earning their AA degree. Students taking these courses will also be able to enter the workforce after receiving their AA and can continue to work while pursuing a bachelor's degree.</br></br>
-The Academic Subject Certificate in Accounting will provide students with an opportunity to focus their elective studies on acquiring accounting skills. Students interested in exploring accounting as a possible major at a four-year institution can take these courses while earning their AA degree. Students also will have the opportunity to show potential employers they have accounting skills improving their chances of getting an accounting clerk position. Students holding this certificate will also be able to present themselves as receiving specialized training in accounting, which will greatly enhance their employment potential and admission into four-year business programs. </br></br>
-Degree Awarded: Academic Subject Certificate</br></br>
-URL: http://www.leeward.hawaii.edu/asc-acct</br></br>
-Contact: Tina Lee</br>
-Phone: (808) 455-0348</br>
-Email: tinaplee@hawaii.edu</br>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">More information about this program</button>
-            <button type="button" class="btn btn-primary">Apply to this program</button>
-          </div>
+    <form id="form_b" method="post" action="">
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-4">
+          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <input type="text" id="campus_value" value="" placeholder="Campus to be Attended" class="form-control" />
         </div>
       </div>
-    </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="form-group col-md-6">
+          <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+               <option value="" selected="selected">Where Did You Last Attend?</option>
+               <option value="1">Hawaiʻi CC</option>
+               <option value="2">Honolulu CC</option>
+               <option value="3">Kapiʻolani CC</option>
+               <option value="4">Kauaʻi CC</option>
+               <option value="5">Leeward CC</option>
+               <option value="6">UH Hilo</option>
+               <option value="7">UH Mānoa</option>
+               <option value="8">UH Mānoa Outreach</option>
+               <option value="9">UH Maui College</option>
+               <option value="10">UH West Oʻahu</option>
+               <option value="11">Windward CC</option>
+               <option value="11">Other</option>
+             </select>
+        </div>
+        <div class="form-group col-md-6">
+          <select class="form-control select select-primary select2-offscreen " data-toggle="select" tabindex="-1" title="">
+               <option value="" selected="selected">How Many Years Ago?</option>
+               <option value="1">1-2 years</option>
+               <option value="2">3-5 years</option>
+               <option value="3">6-10 years</option>
+               <option value="4">More than 10</option>
+             </select>
+        </div>
+      </div>
+        <div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+    </form>
+	</div>
+</div>
+</div>
     <div class="row">
       <div class="col-xs-12 col-md-12">
-          <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
-          <h3>Undergraduate Programs</h3>
+        <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
+          <h3>Programs</h3>
         <div class="table">
           <div class="row-table header">
             <div class="cell">
               Subject
             </div>
             <div class="cell">
-              Offering Campus
-            </div>
-            <div class="cell">
-              Online
-            </div>
-            <div class="cell">
-              Course List
-            </div>
+              Degree Offered
+            </div>  
           </div>
-          <div class="row-table">
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#myModal">Accounting (ABC)</a>
-            </div>
-            <div class="cell">
-              Leeward Community College
-            </div>
-            <div class="cell">
-              Online
-            </div>            
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#pdfA">Program Flowchart</a>
-            </div>
-          </div>
-          <div class="row-table">
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#myModal">Accounting (CA)</a>
-            </div>
-            <div class="cell">
-              Leeward Community College
-            </div>
-            <div class="cell">
-              Online
-            </div>
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#pdfA">Program Flowchart</a>
-            </div>
-          </div>
-          <div class="row-table">
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#myModal">Administrative Support Hospitality and Legal</a>
-            </div>
-            <div class="cell">
-              Leeward Community College
-            </div>
-            <div class="cell">
-              Online
-            </div>
-          </div>
-          <div class="row-table">
-            <div class="cell">
-              <a href="#0" data-toggle="modal" data-target="#myModal">Disaster Preparedness and Emergency Management (DPEM)</a>
-            </div>
-            <div class="cell">
-              UH West Oʻahu
-            </div>
-            <div class="cell">
-              Online
-            </div>
-          </div>
+              <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($CERT as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+        <h3>Associate of Arts Degree Programs</h3>
+              <div class="table">
+                <div class="row-table header">
+                  <div class="cell">
+                    Subject
+                  </div>
+                  <div class="cell">
+                    Path to Graduation
+                  </div>
+                </div>
+                <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($AA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+            <h3>Bachelor Degree Programs</h3>
+              <div class="table">
+                <div class="row-table header">
+                  <div class="cell">
+                    Subject
+                  </div>
+                  <div class="cell">
+                    Path to Graduation
+                  </div>
+                </div>
+                <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($BA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+
         </div>
         <h1>Course Transfer Database</h1>
     </div>
@@ -224,6 +227,7 @@ Email: tinaplee@hawaii.edu</br>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>
     <script src="js/set-height.js"></script>
+    <script src="js/page3.js"></script>
 
     <script>
       videojs.options.flash.swf = "dist/js/vendors/video-js.swf"

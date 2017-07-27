@@ -9,7 +9,7 @@
           <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav navbar-right">
               <li name="dropdown" class="dropdown">
-                <a href="program-select.html" class="dropdown-toggle" data-toggle="dropdown">Find a Program<b class="caret"></b></a>
+                <a href="program-select.html" class="dropdown-toggle" data-toggle="dropdown">Programs Offered<b class="caret"></b></a>
                 <span class="dropdown-arrow"></span>
                 <ul class="dropdown-menu">
                   <li><a href="program-select.html">All Programs</a></li>

@@ -9,6 +9,14 @@ $(document).ready(function () {
       modal.find('#course_code').val(obj);
     });
 
+    $('#reg_form').on('shown.bs.modal', function(event){
+      var button = $(event.relatedTarget);
+      var obj = button.val();
+      var modal = $(this);
+      modal.find('#campus_value').val(obj);
+    });
+
+
     $('#apply').click(function(){
     	console.log('hello');
     	$('#myModal').modal('toggle');
@@ -26,17 +34,6 @@ $(document).ready(function () {
     	console.log('hello');	
     });
 
-    $('#acc_modal').click(function(e){
-    	$('.modal-container').load('resources/modals/modalAcc.html',function(result){
-    		$('#mymodal').modal({show:true});
-    	});
-   	});
-
-    $('#ca_modal').click(function(e){
-    	$('#stud').load('resources/modals/modalCA.html','#acc_CA');
-    	console.log($('#stud'));
-    		$('#stud').modal('toggle');
-    });
 });
 
 

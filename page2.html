@@ -1,3 +1,50 @@
+<?php 
+
+  class program{
+    
+    public $course_name;
+    public $college;
+    public $value;
+    public $level;
+    public $modal;
+
+  }
+
+  $course_array = array();
+
+  $json_file = file_get_contents("programs.json");
+  $array     = json_decode($json_file);
+  foreach ($array as $key => $jsons) { // search each program
+    $course = new program();
+     foreach($jsons as $key => $value) { 
+      if($key==="name"){
+        $course->course_name = $value;
+      }
+      if($key==="college"){
+        $course->college = $value;
+      }
+      if($key==="value"){
+        $course->value = $value;
+      }
+      if($key==="level"){
+        $course->level = $value;
+      }
+      if($key==="modal"){
+        $course->modal = $value;
+      }       
+     // get each value within the program    
+     }
+     array_push($course_array, $course);
+  }
+
+  $programType = "All Programs";
+  $course_listing = array();
+  foreach ($course_array as $program){
+    $val = $program->course_name;
+    array_push($course_listing, $val);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,42 +92,43 @@
           <div class="col-md-12">
     <div><h2>What are your interests?</h2></div>
         <div><p>Let us help you!  Please enter your information below.</p></div>
-   <form method="POST" action="dynamic.php">
+   <form method="POST" action="">
     <div class="form text-center">
-        <div class="form-group col-md-4">
-           <input type="text" value="" name="first_name" placeholder="First Name" class="form-control" />
-        </div>
-        <div class="form-group col-md-4">
-           <input type="text" value="" name="last_name" placeholder="Last Name" class="form-control" />
-        </div>
-    <select name="course_dropdown" id="course_dropdown" class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+    <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+      <?php
+            $htmlOutput = "";
+            //building html table
+            $i = 0;
+            foreach($course_listing as $program){
+              $htmlOutput .= '<option value="'.$i.'">'.$program.'</option>';
+            }
+          print($htmlOutput);
+          ?>
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+      <option value="4"></option>
+    </select>
+    <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
       <option value="0" selected="selected">General Interest</option>
       <option value="1">Accounting &amp; Finance</option>
-      <option value="2">Art &amp; Design</option>
-      <option value="3">Business</option>
-      <option value="4">Communications</option>
-      <option value="5">Creative Writing &amp; English</option>
-      <option value="6">Criminal Justice</option>
-      <option value="7">Data Analytics</option>
-      <option value="8">Economics</option>
-      <option value="9">Education</option>
-      <option value="10">Engineering</option>
-      <option value="11">Environmental</option>
-      <option value="12">Game Design &amp; Development</option>
-      <option value="13">Healthcare</option>
-      <option value="14">History</option>
-      <option value="15">Human Resources</option>
-      <option value="16">Information Technology</option>
-      <option value="17">Liberal Arts</option>
-      <option value="18">Marketing</option>
-      <option value="19">Math &amp; Science</option>
-      <option value="20">MBA &amp; International MBA</option>
-      <option value="21">Nursing</option>
-      <option value="22">Operations &amp; Project Management</option>
-      <option value="23">Psychology &amp; Counseling</option>
-      <option value="24">Public Admin &amp; Political Science</option>
-      <option value="25">Social Sciences</option>
-      <option value="26">Sport Management &amp; Athletic Admin</option>
+      <option value="2">Business</option>
+      <option value="3">Disability Studies</option>
+      <option value="4">Education</option>
+      <option value="5">Indigenous Language and Culture Education</option>
+      <option value="6">Interdisciplinary Studies</option>
+      <option value="7">Kinesiology and Rehabilitation Science</option>
+      <option value="8">Liberal Arts</option>
+      <option value="9">Library and Information Sciences</option>
+      <option value="10">Management</option>
+      <option value="11">Nursing</option>
+      <option value="12">Political Science</option>
+      <option value="13">Psychology</option>
+      <option value="14">Public Administration</option>
+      <option value="15">Risk Management and Insurance (RMI)</option>
+      <option value="16">Social Work</option>
+      <option value="17">Substance Abuse &amp; Addictions Studies</option>
+      <option value="18">Writing</option>
     </select>
     <div class="col-md-12 text-center">
       <input type="submit" class="btn btn-sm btn-danger starting2" value="What Programs Are Available"/>
@@ -101,11 +149,11 @@
             </div>
             <div class="col-xs-12 col-md-7">
                 <h2>Interactive Video (ITV)</h2>
-                        <p>ITV allows students to take a course from one location while the instructor teaches from another. Class meetings are held at a specific time and place (synchronous). Both instructor and students can see and hear each other, simulating a face-to-face class environment. In most ITV courses, there will be an online component for outside class communication, material distribution and assignments.</p>
+                        <p>ITV allows students to take a course from one location while the instructor teaches from another. Class meetings are held at a specific time and place (synchronous). Both instructor and students can see and hear each other, simulating a face-to-face class environment. In most ITV courses, there will be an online component for outside class  communication, material distribution and assignments.</p>
                     </div>
         <div class="col-xs-12 col-md-12">
             <h2>Cable</h2>
-                    <p>Cable allows students to take cable courses in the convenience of their home. Courses are either live or pre-recorded. In most cable courses, there will be an online component for outside class communication, material distribution and assignments. </p>
+                    <p>Cable allows students to take cable courses in the convenience of their home. Courses are either live or pre-recorded. In most cable courses, there will be an online component for outside class communication, material distribution and assignments.</p>
         </div>
 
 

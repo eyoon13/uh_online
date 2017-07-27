@@ -1,0 +1,25 @@
+<?php
+  $url = "http://www.leeward.hawaii.edu/asc-writing";
+  $code="WBT_CODE";
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+        </button>
+          <h5 class="modal-title" id="exampleModalLabel">Writing Business Track</h5>
+            </div>
+              <div class="modal-body">
+                The Academic Subject Certificate in Writing provides a structured course of study for students interested in further developing their facilities with written language, critical thinking, and creativity.</br>This Certificate will greatly enhance students' educational and career opportunities. As research has clearly demonstrated, writing offers an unparalleled opportunity for intellectual and creative development.</br>Students who are extensively trained in writing have enhanced skills that will promote their educational and career success. At the same time, writing is also one of the best vehicles there is for intellectual and creative growth and development.</br></br>
+                Degree Awarded:  Academic Subject Certificate</br></br>
+                URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+                Contact: Stephen Herr</br>Phone: (808) 455-0428</br>Email: sherr@hawaii.edu
+              </div>
+            <div class="modal-footer">
+          <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+        <button type="button" id="apply2" class="btn btn-primary" data-toggle="modal" data-target="#reg_form">Apply to this program</button>
+      <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
+    </div>
+  </div>
+</div>

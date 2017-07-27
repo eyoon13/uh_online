@@ -1,0 +1,25 @@
+<?php
+  $url = "http://www.leeward.hawaii.edu/asc-mgt";
+  $code="management_cert_code";
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+        </button>
+          <h5 class="modal-title" id="exampleModalLabel">Management</h5>
+            </div>
+              <div class="modal-body">
+                Designed to enhance the marketability and increase earning potential of the Liberal Arts students who will enter the workforce upon graduation, work while earning their associate's degree, or continue working while pursuing a bachelor's degree.</br>The Academic Subject Certificate in Management will provide students with an opportunity to focus their elective studies on acquiring managerial skills. Students interested in exploring management as a possible major at a four-year institution can take these courses while earning their AA degree. Students also will have the opportunity to show potential employers they have basic management skills, improving their chances of moving into supervisory positions. Students holding this certificate will also be able to present themselves as receiving specialized training in management, which will enhance their employment potential and admission into four-year business programs.</br></br>
+                Degree Awarded: Academic Subject Certificate</br></br>
+                URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+                Contact: Ross Higa</br>Phone: (808)455-0284</br>Email: higaross@hawaii.edu
+              </div>
+            <div class="modal-footer">
+          <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
+        <button type="button" id="apply2" class="btn btn-primary" data-toggle="modal" data-target="#reg_form">Apply to this program</button>
+      <button data-dismiss="modal" class="btn btn-danger">Dismiss</button>
+    </div>
+  </div>
+</div>

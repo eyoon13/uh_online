@@ -1,6 +1,69 @@
 <?php
   echo($_REQUEST['val']);
+  if(! empty($_POST['buttonB'])){
+    $_courseID = $_POST['buttonB'];
+  }else{$_courseID ="";}
+  if(! empty($_POST['first_name'])){
+    $_fName = $_POST['first_name'];
+  }else{$_fName ="";}
+  if(! empty($_POST['last_name'])){
+    $_lName =$_POST['last_name'];
+  }else{$_lName ="";}
+  if(! empty($_POST['course_dropdown'])){
+      $val = $_POST['course_dropdown'];
+  }else{
+    $_valueDropdown ="";
+    $val = 0;
+  }
 
+  class program{
+    
+    public $course_name;
+    public $college;
+    public $value;
+    public $level;
+    public $modal;
+
+  }
+
+  $course_array = array();
+
+  $json_file = file_get_contents("programs.json");
+  $array     = json_decode($json_file);
+  foreach ($array as $key => $jsons) { // search each program
+    $course = new program();
+     foreach($jsons as $key => $value) { 
+      if($key==="name"){
+        $course->course_name = $value;
+      }
+      if($key==="college"){
+        $course->college = $value;
+      }
+      if($key==="value"){
+        $course->value = $value;
+      }
+      if($key==="level"){
+        $course->level = $value;
+      }
+      if($key==="modal"){
+        $course->modal = $value;
+      }       
+     // get each value within the program    
+     }
+     array_push($course_array, $course);
+}
+
+$programType = "All Programs";
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($CERT, $double_arr);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,42 +106,7 @@
     <header>
       <?php include_once('resources/templates/header.php'); ?>
     </header>
-
-<!-- Accounting Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
-        <div class="modal-dialog modal-lg" role="document">
-            <?php include('resources/modals/modalAcc.html'); ?>
-        </div>
-    </div>
-
-<!-- Form Modal-->
-      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1700;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/formA.html'); ?>
-        </div>
-      </div>
-
-            <!-- Modal 3-->    
-      <div class="modal fade" id="acc_CA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/modalCA.html'); ?>
-        </div>
-      </div>
-
-<!-- ASLH Modal-->    
-      <div class="modal fade" id="ASHL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/ASHL.html'); ?>
-        </div>
-</div>
-
-<!-- DPEM Modal-->    
-      <div class="modal fade" id="DPEM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/DPEM.html'); ?>
-        </div>
-</div>
-
+      <?php include_once('resources/modal.html'); ?>
 
 
       
@@ -95,39 +123,16 @@
                     Online
                   </div>
                 </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a href="#0" data-toggle="modal" data-target="#myModal">Accounting (ABC)</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a href="#0" data-toggle="modal" data-target="#acc_CA">Accounting (CA)</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a href="#0" data-toggle="modal" data-target="#ASHL">Administrative Support Hospitality and Legal</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a href="#0" data-toggle="modal" data-target="#DPEM">Disaster Preparedness and Emergency Management (DPEM)</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-              </div>
+                <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($CERT as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
 
               </div>
         </div>

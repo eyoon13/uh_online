@@ -19,7 +19,7 @@
 
   <link href="css/old-styles.css" rel="stylesheet">
   <link href="css/flat-ui.css" rel="stylesheet">
-  <link href="css/styles-chasek.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -38,11 +38,33 @@
       <?php include_once('resources/templates/header.php'); ?>
     </header>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1400;">
-      <div class="modal-dialog modal-lg" role="document">
-        <?php include('resources/modals/modalAcc.html'); ?>
-      </div>
+<!-- Business Admin BA Modal-->    
+  <div class="modal fade" id="bAdmin_BA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+    <div class="modal-dialog modal-lg" role="document">
+      <?php include('resources/modals/business_admin_BA.html'); ?>
     </div>
+  </div>
+
+<!-- Business Accounting BA Modal-->   
+<div class="modal fade" id="bAcc_BA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+  <div class="modal-dialog modal-lg" role="document">
+    <?php include('resources/modals/b_acc_BA.html'); ?>
+  </div>
+</div>
+
+<!-- Business Administration, Hospitality and Tourism BA Modal-->   
+<div class="modal fade" id="baht_BS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+  <div class="modal-dialog modal-lg" role="document">
+    <?php include('resources/modals/BAHT.html'); ?>
+  </div>
+</div>
+
+<!-- Business Administration, Marketing BA Modal-->   
+<div class="modal fade" id="bam_BS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
+  <div class="modal-dialog modal-lg" role="document">
+    <?php include('resources/modals/BAM.html'); ?>
+  </div>
+</div>
             <!-- Modal -->
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
@@ -61,7 +83,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a>Business Administration, General Business Administration</a>
+                    <a href="#0" data-toggle="modal" data-target="#bAdmin_BA">Business Administration, General Business Administration</a>
                   </div>
                   <div class="cell">
                     Leeward Community College
@@ -72,7 +94,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a>Business Administration, Accounting</a>
+                    <a href="#0" data-toggle="modal" data-target="#bAcc_BA">Business Administration, Accounting</a>
                   </div>
                   <div class="cell">
                     Leeward Community College
@@ -83,7 +105,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a>Business Administration, Hospitality and Tourism</a>
+                    <a href="#0" data-toggle="modal" data-target="#baht_BS">Business Administration, Hospitality and Tourism</a>
                   </div>
                   <div class="cell">
                     Leeward Community College
@@ -94,7 +116,7 @@
                 </div>
                 <div class="row-table">
                   <div class="cell">
-                    <a>Business Administration, Marketing</a>
+                    <a href="#0" data-toggle="modal" data-target="#bam_BS">Business Administration, Marketing</a>
                   </div>
                   <div class="cell">
                     Leeward Community College
@@ -108,26 +130,24 @@
 
   <div class="parallax p2" id="section-2">
     <hgroup>
-      <form id="info_form_1" method="post" action="process.php">
+      <form action="test.php" method="post">
         <div class="col-md-12">
-          <h1>Please fill out this form to recieve more information</h1>
+          <h1>Please fill out this form to receive more information</h1>
         </div>
         <div class="form-group col-md-6">
-          <input type="text" name="first_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
+          <input type="text" name="f_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
         </div>
         <div class="form-group col-md-6">
-          <input type="text" name="last_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
+          <input type="text" name="l_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
         </div>
         <div class="form-group col-md-12" id="email-group">
           <input type="email" name="email" placeholder="Email" class="form-control" required>
         </div>
         <div class="form-group col-md-12">
-          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+          <textarea class="form-control" name="question" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
         </div>
-        <h2 class="col-md-12">
-          <button type="submit" name="gen_info" form="info_form_1" id="gen_info" va class="btn btn-primary">Submit</button>
-        </h2>
-      </form>
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+        </form>
     <hgroup>
      <div class="filler"></div> 
   </div>

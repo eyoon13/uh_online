@@ -224,7 +224,7 @@ li.active > a.nav-button {
   color: #fff;
 }
 .parallax.p2 {
-  background: url("https://www.hawaii.edu/dl/images/whatservicesareavailable002.jpg") no-repeat fixed 70% 0;
+  background: url(../images/whatservicesareavailable002.jpg) no-repeat fixed 70% 0;
   background-size: cover;
   color: #fff;
 }
@@ -246,7 +246,7 @@ li.active > a.nav-button {
   height:auto;
 }
 .parallax.p6 {
-  background: url("https://www.hawaii.edu/dl/images/howdoigetstarted002.jpg") no-repeat fixed 70% 0;
+  background: url(../images/howdoigetstarted002.jpg) no-repeat fixed 70% 0;
   background-size: cover;
   color: #fff;
 }
@@ -373,6 +373,10 @@ footer p {
   padding-left: 15px;
   text-indent: 20px;
   color: #ececec;
+}
+
+.select.form-control{
+    margin: 10px;
 }
 @media screen and (max-width: 1000px) {
     .panel {

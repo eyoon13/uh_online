@@ -1,5 +1,7 @@
 $(document).ready(function () {
+  
   $(".dropdown-toggle").dropdown();
+
   $('#apply').click(function(){
       $('#myModal').modal('toggle');
       setTimeout(function(){

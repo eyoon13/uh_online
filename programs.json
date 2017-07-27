@@ -13,7 +13,7 @@
 }, {
 	"name": "Administrative Support Hospitality and Legal",
 	"college": "LA",
-	"value": ["15"],
+	"value": ["2"],
 	"level": "CERT",
 	"modal": "ASHL"
 }, {
@@ -21,47 +21,107 @@
 	"college": "LA",
 	"value": ["24"],
 	"level": "CERT",
-	"modal": "myModal"
+	"modal": "DPEM"
 }, {
-	"name": "Accounting",
+	"name": "Business Essentials",
+	"college": "LA",
+	"value": ["2"],
+	"level": "CERT",
+	"modal": "be_CERT"
+},{
+	"name": "Health Care Administration (HCAD)",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "HCAD_CERT"
+},{
+	"name": "Management",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "man_CERT"
+},{
+	"name": "Management Essentials",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "manE_CERT"
+},{
+	"name": "Management Foundations",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "manF_CERT"
+},{
+	"name": "Retail Foundations",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "retail_CERT"
+},{
+	"name": "Risk Management and Insurance (RMI)",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "risk_CERT"
+},{
+	"name": "Small Business Accounting",
+	"college": "LA",
+	"value": ["1"],
+	"level": "CERT",
+	"modal": "SBA_CERT"
+},{
+	"name": "Substance Abuse and Addiction Studies (SAAS)",
+	"college": "LA",
+	"value": ["19"],
+	"level": "CERT",
+	"modal": "SAAS_CERT"
+},{
+	"name": "Writing Business Track",
+	"college": "LA",
+	"value": ["19"],
+	"level": "CERT",
+	"modal": "WBT_CERT"
+},{
+	"name": "Accounting(AS)",
 	"college": "LA",
 	"value": ["1"],
 	"level": "AA",
-	"modal": "myModal"
+	"modal": "acc_AA"
 }, {
 	"name": "Libral Arts",
 	"college": "LA",
 	"value": ["17"],
 	"level": "AA",
-	"modal": "myModal"
+	"modal": "la_AA"
 }, {
 	"name": "Teaching",
 	"college": "LA",
 	"value": ["17"],
 	"level": "AA",
-	"modal": "myModal"
+	"modal": "teach_AA"
 }, {
 	"name": "Business Administration, General Business Administration",
 	"college": "LA",
-	"value": ["3"],
+	"value": ["2"],
 	"level": "BA",
-	"modal": "myModal"
+	"modal": "bAdmin_BA"
 }, {
 	"name": "Business Administration, Accounting",
 	"college": "LA",
-	"value": ["1", "3"],
+	"value": ["1"],
 	"level": "BA",
-	"modal": "myModal"
+	"modal": "bAcc_BA"
 }, {
 	"name": "Business Administration, Hospitality and Tourism",
 	"college": "LA",
-	"value": ["17", "3"],
+	"value": ["2"],
 	"level": "BA",
-	"modal": "myModal"
+	"modal": "baht_BS"
 }, {
 	"name": "Business Administration, Marketing",
 	"college": "LA",
-	"value": ["18", "3"],
+	"value": ["2"],
 	"level": "BA",
-	"modal": "myModal"
+	"modal": "bam_BS"
 }]
