@@ -3,18 +3,28 @@
   if(! empty($_POST['buttonB'])){
     $_courseID = $_POST['buttonB'];
   }else{$_courseID ="";}
+
   if(! empty($_POST['first_name'])){
     $_fName = $_POST['first_name'];
   }else{$_fName ="";}
+
   if(! empty($_POST['last_name'])){
     $_lName =$_POST['last_name'];
   }else{$_lName ="";}
-  if(! empty($_POST['course_dropdown'])){
-    	$val = $_POST['course_dropdown'];
+
+  if(! empty($_POST['areaOfStudy'])){
+    	$val = $_POST['areaOfStudy'];
   }else{
   	$_valueDropdown ="";
   	$val = 0;
   }
+  
+  if($_POST['credential'] != ""){
+      $cred = $_POST['credential'];
+      if($_POST['areaOfStudy']!= ""){
+        $val = $_POST['areaOfStudy'];
+      }else{ $val = 0;}
+  }else{$cred = "";};
 
 	class program{
 		
@@ -97,7 +107,7 @@ switch ($val){
   }
   break;
 
-  case 3:
+  case 2:
     $programType = "Business";
     //create new array for table
   $CERT        = array();
@@ -108,7 +118,7 @@ switch ($val){
       $double_arr = array();
       $ar = $program->value;
       foreach($ar as $nums){
-        if($nums == "3"){
+        if($nums == "2"){
           array_push($double_arr,  $program->course_name);
           array_push($double_arr,  $program->modal);
           array_push($CERT, $double_arr);
@@ -119,7 +129,7 @@ switch ($val){
       $double_arr = array();
       $ar = $program->value;
       foreach($ar as $nums){
-        if($nums == "3"){
+        if($nums == "2"){
           array_push($double_arr,  $program->course_name);
           array_push($double_arr,  $program->modal);
           array_push($AA, $double_arr);
@@ -130,7 +140,7 @@ switch ($val){
       $double_arr = array();
       $ar = $program->value;
       foreach($ar as $nums){
-        if($nums == "3"){
+        if($nums == "2"){
           array_push($double_arr,  $program->course_name);
           array_push($double_arr,  $program->modal);
           array_push($BA, $double_arr);
@@ -166,6 +176,26 @@ switch ($val){
         array_push($BA, $double_arr);
     }
   }
+}
+
+switch ($cred) {
+  case 'CERT':
+    $AA = array();
+    $BA = array();
+    break;
+  
+  case 'AA':
+    $CERT = array();
+    $BA   = array();
+    break;
+
+  case 'BA':
+    $AA   = array();
+    $CERT = array();
+    break;
+
+  default:
+    break;
 }
 
 ?>

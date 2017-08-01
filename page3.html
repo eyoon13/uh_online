@@ -46,19 +46,19 @@
           <div class="col-md-12">
 		<div><h2>Let's See How We Can help You!</h2></div>
         <div><p>Please enter your information below.</p></div>
-    <form id="form_b" method="post" action="">
+    <form id="form_b" method="post" action="" style="margin-left:85px;">
       <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
         <div class="col-md-4">
-          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control"/>
         </div>
         <div class="col-md-4">
-          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control"/>
         </div>
         <div class="col-md-4">
-          <input type="text" id="campus_value" value="" placeholder="Campus to be Attended" class="form-control" />
+          <input type="email" id="page3_email" value="" placeholder="Email" class="form-control" />
         </div>
       </div>
-      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <div class="row" style="padding:0 0 .5em 1em; min-height:1em;">
         <div class="form-group col-md-6">
           <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
                <option value="" selected="selected">Where Did You Last Attend?</option>
@@ -86,8 +86,18 @@
              </select>
         </div>
       </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-12">
+          <input type="text" name="phone" placeholder="Phone Number (000)111-1111" class="form-control"/>
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 .5em 1em; min-height:1em;">
+        <div class="form-group col-md-12">
+          <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+        </div>
+      </div>
         <div>
-          <button type="submit" class="btn btn-danger">Submit</button>
+          <button type="submit" class="btn btn-danger" style="margin-right:100px;">Submit</button>
         </div>
     </form>
 	</div>
@@ -95,16 +105,14 @@
 </div>
     <div class="row">
       <div class="col-xs-12 col-md-12">
-        <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
+        <h2 class"page-header">Undergraduate Programs at the University of Hawaiʻi</h2>
           <h3>Programs</h3>
+      <div class="col-xs-4 col-md-4">
         <div class="table">
           <div class="row-table header">
             <div class="cell">
-              Subject
+              Certificate Programs
             </div>
-            <div class="cell">
-              Degree Offered
-            </div>  
           </div>
               <?php
             $htmlOutput = "";
@@ -112,19 +120,17 @@
             foreach($CERT as $arr){
               $name = $arr[0];
               $modalA = $arr[1];
-              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div></div>';
             }
           print($htmlOutput);
           ?>
         </div>
-        <h3>Associate of Arts Degree Programs</h3>
+      </div>
+      <div class="col-xs-4 col-md-4">
               <div class="table">
                 <div class="row-table header">
                   <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Path to Graduation
+                    Associate Degree Programs
                   </div>
                 </div>
                 <?php
@@ -133,19 +139,17 @@
             foreach($AA as $arr){
               $name = $arr[0];
               $modalA = $arr[1];
-              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'">'.$name.'</a></div></div>';
             }
           print($htmlOutput);
           ?>
         </div>
-            <h3>Bachelor Degree Programs</h3>
+      </div> 
+      <div class="col-xs-4 col-md-4">
               <div class="table">
                 <div class="row-table header">
                   <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Path to Graduation
+                    Bachelor’s Degree Programs
                   </div>
                 </div>
                 <?php
@@ -154,72 +158,29 @@
             foreach($BA as $arr){
               $name = $arr[0];
               $modalA = $arr[1];
-              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div></div>';
             }
           print($htmlOutput);
           ?>
-
+          </div>
         </div>
-        <h1>Course Transfer Database</h1>
     </div>
+    <h2 class"page-header">Graduate Programs At The University of Hawaiʻi</h2>
+</div>
+    <div class="parallax p2" id="section-2">
+      <hgroup>
+    <h1>Course Transfer Database</h1>
         <div class="col-xs-12 col-md-12">
         <p>The Course Transfer Database website contains a searchable database of course equivalencies/evaluations for UH campuses, as well as other colleges and universities. The evaluation of courses on this site is a guide, and transferability of any given course is not guaranteed until an official transfer credit evaluation is completed. Specific course equivalencies require review based upon the unique characteristics of each college and university, and may differ from one institution to another. Be sure to contact an academic advisor as the database is regularly updated and subject to change.</p>
     </div>
     <div class="col-md-12 text-left">
         <a href="program-select.html" class="btn btn-lg btn-danger starting2">Take Me There</a>
     </div>
-</div>
-    <div class="parallax p2" id="section-2">
-      <hgroup>
-          <form-group>
-          <div class="col-md-12">
-         <h1>Please fill out this form to recieve more information</h1>
-         </div>
-         <div class="form-group col-md-6">
-        <input type="text" value="" placeholder="First Name" class="form-control" />
-      </div>
-      <div class="form-group col-md-6">
-        <input type="text" value="" placeholder="Last Name" class="form-control" />
-      </div>
-      <div class="form-group col-md-12">
-        <input type="text" value="" placeholder="Email" class="form-control" />
-      </div>
-      <div class="form-group col-md-12">
-       <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
-      </div>
-     <h2 class="col-md-12"><button class="btn btn-danger">Submit</button></h2>
-         </form-group>
       </hgroup>
     </div>
-    <div class="row">
-      <div class="col-md-4 col-xs-12">
-          <h2>Book Ordering</h2>
-                    <p>Booklist information is available three weeks before classes begin at the <a href="http://www.bookstore.hawaii.edu/main/" target="_blank">host campus bookstore website</a>.</p>
-                    <p>Books may be purchased through the host campus bookstore by one of the following options:</p>
-
-                    <h3>Return Books</h3>
-                    <p>Return books will be sent back to the appropriate home campus bookstore for refund.  Normal refund policies, found on the home campus website will apply.</p>
-      </div>
-      <div class="col-md-4 col-xs-12">
-          <h3>Buyback</h3>
-          <ul>
-              <li>All UH bookstores utilize a consolidated buyer's guide and students may sell their used books at the nearest campus bookstore.</li>
-              <li>Buyback schedules vary at each campus bookstore.  It is recommended students check what the dates and times at the nearest campus bookstore.</li>
-          </ul>
-      </div>
-      <div class="col-md-4 col-xs-12">
-          <h3>Cost</h3>
-                    <ul>
-                        <li>New and used textbooks are priced as listed on the home campus bookstore website.  Used textbooks (when available) are priced 25% less than new textbooks.</li>
-                        <li>No sales tax is added to your order.</li>
-                        <li>Shipping policies are listed on the home campus bookstore website.</li>
-                        <li>Additional shipping charges will incur if you are taking classes from more than one campus.</li>
-                    </ul>
-      </div>
-    </div>
-    </div>
-    <?php include_once('resources/templates/footer.php');?> 
-  </body>
+  </div>
+  <?php include_once('resources/templates/footer.php');?> 
+</body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/vendor/jquery.min.js"></script>

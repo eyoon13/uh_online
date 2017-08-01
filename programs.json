@@ -124,4 +124,16 @@
 	"value": ["2"],
 	"level": "BA",
 	"modal": "bam_BS"
+}, {
+	"name": "Executive MBA",
+	"college": "Business",
+	"value": ["2"],
+	"level": "MA",
+	"modal": "exec_MBA"
+}, {
+	"name": "Human Resources Management",
+	"college": "LA",
+	"value": ["2"],
+	"level": "MA",
+	"modal": "HRM_MA"
 }]

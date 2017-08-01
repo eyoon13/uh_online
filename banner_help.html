@@ -1,0 +1,92 @@
+<?php
+  $campus = $_GET['course_value'];
+  $code   = $_GET['code'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Distance Learning at University of Hawaii</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+  <link href="css/old-styles.css" rel="stylesheet">
+  <link href="css/flat-ui.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-target=".bd-sidenav-active">
+  <header>
+   <?php include_once('resources/templates/header.php'); ?>
+  </header>
+
+  <div class="container">
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <div>Please Select Campus: <?php echo($campus); ?></div>
+    </div>
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <div>Please Select Program: <?php echo($code); ?></div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <form id="form_b" method="post" action="">
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-6">
+          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-12">
+          <input type="text" name="app" placeholder="Application Type" class="form-control">
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-6">
+          <input type="text" id="campus_value" value="" placeholder="Campus to be Attended" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
+            <option value="fall">Fall</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="ext">Extension</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <div class="col-md-12">
+          <button type="submit" form="form_2" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
+          <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

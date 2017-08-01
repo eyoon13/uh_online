@@ -1,4 +1,8 @@
-<?php include_once('table_builder.php'); ?>
+<?php include_once('table_builder.php');
+var_dump($_POST['credential']);
+var_dump($_POST['areaOfStudy']);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,17 +49,8 @@
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
                 <h3>Certificate Programs</h3>
-              <div class="table">
-                <div class="row-table header">
-                  <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Path to Graduation
-                  </div>
-                </div>
                 <?php
-  					$htmlOutput = "";
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
   					//building html table
   					foreach($CERT as $arr){
   						$name = $arr[0];
@@ -66,17 +61,8 @@
   				?>
   			</div>
         <h3>Associate of Arts Degree Programs</h3>
-              <div class="table">
-                <div class="row-table header">
-                  <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Path to Graduation
-                  </div>
-                </div>
                 <?php
-  					$htmlOutput = "";
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
   					//building html table
   					foreach($AA as $arr){
   						$name = $arr[0];
@@ -87,17 +73,8 @@
   				?>
   			</div>
             <h3>Bachelor Degree Programs</h3>
-              <div class="table">
-                <div class="row-table header">
-                  <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Path to Graduation
-                  </div>
-                </div>
                 <?php
-  					$htmlOutput = "";
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
   					//building html table
   					foreach($BA as $arr){
   						$name = $arr[0];

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	$(".dropdown-toggle").dropdown();
 	
 	$('#degree_button').click(function(){
     	setTimeout(function(){
