@@ -24,7 +24,7 @@
 
   <link href="css/old-styles.css" rel="stylesheet">
   <link href="css/flat-ui.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/eric.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,6 +34,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <script>document.write('<style>.js_hidden { display: none; }</style>');</script>
 
 </head>
 
@@ -42,51 +43,39 @@
    <?php include_once('resources/templates/header.php'); ?>
   </header>
 
+  <div class="title">
+    <h1 class="tab">Directions for Filling Out Online Application</h1>
+  </div>
+
   <div class="container">
     <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-      <div>Please Select Campus: <?php echo($campus); ?></div>
+      <h2>1. Click link below to begin online application process.</h2>
+      <a class="tab" id="banner_link">Click to open a new window</a>
     </div>
     <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-      <div>Please Select Program: <?php echo($code); ?></div>
+      <h2>2. For first time users: create an account.</h2>    
     </div>
-
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+        <h2>3. When asked for campus please select:</h2>
+        <h3><div class="tab value-color"><?php echo($campus); ?></div></h3>
+        <button id="togButton" class="tab btn btn-primary">Show</button>  
+        <img class="tab js_hidden" id="select-campus" src="images/select-campus.jpg" height="600" width="1000">
+    </div>
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <h2>4.Select application type.</h2>    
+    </div>
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <h2>5.Select academic term you'd like to start.</h2>    
+      <h3 class="tab">5.1 Then fill out first name, middle name and last name.</h2> 
+    </div>
+    <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
+      <h2>6.Under "Planned course of study" select:</h2>
+        <h3><div class="tab value-color"> <?php echo($code); ?></div></h3>
+        <button id="mainbanner" class="tab btn btn-primary">Show</button>
+        <img class="tab js_hidden" id="banner-main" src="images/banner-main.jpg" height="600" width="1000">
+    </div>
   </div>
 
-  <div class="container-fluid">
-    <form id="form_b" method="post" action="">
-      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-        <div class="col-md-6">
-          <input type="text" name="first_name" value="<?php echo($_fName )?>" placeholder="First Name" class="form-control" />
-        </div>
-        <div class="col-md-6">
-          <input type="text" name="last_name" value="<?php echo($_lName )?>" placeholder="Last Name" class="form-control" />
-        </div>
-      </div>
-      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-        <div class="col-md-12">
-          <input type="text" name="app" placeholder="Application Type" class="form-control">
-        </div>
-      </div>
-      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-        <div class="col-md-6">
-          <input type="text" id="campus_value" value="" placeholder="Campus to be Attended" class="form-control" />
-        </div>
-        <div class="col-md-6">
-          <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
-            <option value="fall">Fall</option>
-            <option value="spring">Spring</option>
-            <option value="summer">Summer</option>
-            <option value="ext">Extension</option>
-          </select>
-        </div>
-      </div>
-      <div class="row" style="padding:0 0 1em 1em; min-height:1em;">
-        <div class="col-md-12">
-          <button type="submit" form="form_2" name="buttonB" id="buttonB" value="A" data-dismiss="modal" class="btn btn-primary">Submit</button>
-          <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
-        </div>
-      </div>
-    </form>
-  </div>
 </body>
+  <script src="js/banner_help.js"></script>
 </html>

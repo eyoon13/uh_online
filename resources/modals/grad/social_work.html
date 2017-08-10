@@ -1,0 +1,24 @@
+<?php
+  $url = "http://www.hawaii.edu/sswork/de/index.html";
+  $code="Social Work (Master Degree in Social Work)";
+  $campus="UH Mānoa"
+?>
+
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+        </button>
+          <h5 class="modal-title" id="exampleModalLabel">Social Work</h5>
+            </div>
+              <div class="modal-body">
+                The MSW program meets the workforce needs to prepare and credential professional social workers residing in neighbor island and rural areas with limited social services.</br></br>
+                Degree Awarded: Master Degree in Social Work</br></br>
+                URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
+                Contact: Dr. Rebecca Stotzer</br>Phone: (808) 956-6121</br>Email: <a href="rstotzer@hawaii.edu">rstotzer@hawaii.edu</a>
+              </div>
+            <div class="modal-footer">
+              <?php include('resources/templates/modal_form.html'); ?>
+    </div>
+  </div>
+</div>

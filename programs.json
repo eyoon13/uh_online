@@ -28,61 +28,61 @@
 	"value": ["2"],
 	"level": "CERT",
 	"modal": "be_CERT"
-},{
+}, {
 	"name": "Health Care Administration (HCAD)",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "HCAD_CERT"
-},{
+}, {
 	"name": "Management",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "man_CERT"
-},{
+}, {
 	"name": "Management Essentials",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "manE_CERT"
-},{
+}, {
 	"name": "Management Foundations",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "manF_CERT"
-},{
+}, {
 	"name": "Retail Foundations",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "retail_CERT"
-},{
+}, {
 	"name": "Risk Management and Insurance (RMI)",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "risk_CERT"
-},{
+}, {
 	"name": "Small Business Accounting",
 	"college": "LA",
 	"value": ["1"],
 	"level": "CERT",
 	"modal": "SBA_CERT"
-},{
+}, {
 	"name": "Substance Abuse and Addiction Studies (SAAS)",
 	"college": "LA",
-	"value": ["19"],
+	"value": ["17"],
 	"level": "CERT",
 	"modal": "SAAS_CERT"
-},{
+}, {
 	"name": "Writing Business Track",
 	"college": "LA",
-	"value": ["19"],
+	"value": ["18, 2"],
 	"level": "CERT",
 	"modal": "WBT_CERT"
-},{
+}, {
 	"name": "Accounting(AS)",
 	"college": "LA",
 	"value": ["1"],
@@ -91,13 +91,13 @@
 }, {
 	"name": "Libral Arts",
 	"college": "LA",
-	"value": ["17"],
+	"value": ["8"],
 	"level": "AA",
 	"modal": "la_AA"
 }, {
 	"name": "Teaching",
 	"college": "LA",
-	"value": ["17"],
+	"value": ["4"],
 	"level": "AA",
 	"modal": "teach_AA"
 }, {
@@ -125,6 +125,114 @@
 	"level": "BA",
 	"modal": "bam_BS"
 }, {
+	"name": "RN-BSN",
+	"college": "Nursing",
+	"value": ["11"],
+	"level": "BA",
+	"modal": "RN-BSN_BS"
+}, {
+	"name": "Hawaiʻi Statewide Nursing Consortium",
+	"college": "Nursing",
+	"value": ["11"],
+	"level": "BA",
+	"modal": "HSNC_BS"
+}, {
+	"name": "Interdisciplinary Studies",
+	"college": "Int Studies",
+	"value": ["6"],
+	"level": "BA",
+	"modal": "inter_BS"
+}, {
+	"name": "Public Administration, Disaster Preparedness and Emergency Management (DPEM)",
+	"college": "Public Administration",
+	"value": ["14"],
+	"level": "BA",
+	"modal": "dpem_BS"
+}, {
+	"name": "Public Administration, General Public Administration",
+	"college": "Public Administration",
+	"value": ["14"],
+	"level": "BA",
+	"modal": "pub-admin_BS"
+}, {
+	"name": "Public Administration, Health Care Administration",
+	"college": "Public Administration",
+	"value": ["14"],
+	"level": "BA",
+	"modal": "pub-hca_BS"
+}, {
+	"name": "Public Administration, Justice Administration",
+	"college": "Public Administration",
+	"value": ["14"],
+	"level": "BA",
+	"modal": "pub-just_BS"
+}, {
+	"name": "Social Sciences, Early Childhood Education",
+	"college": "Social Sciences",
+	"value": ["4"],
+	"level": "BA",
+	"modal": "ss-ece_BS"
+}, {
+	"name": "Social Sciences, Political Science",
+	"college": "Social Sciences",
+	"value": ["12"],
+	"level": "BA",
+	"modal": "ss-pSci_BS"
+}, {
+	"name": "Social Sciences, Psychology",
+	"college": "Social Sciences",
+	"value": ["13"],
+	"level": "BA",
+	"modal": "ss-psych_BS"
+}, {
+	"name": "Post-Baccalaureate Certificate in Secondary Education",
+	"college": "Education",
+	"value": ["4"],
+	"level": "PBA",
+	"modal": "pbcse"
+}, {
+	"name": "Certificate in Learning Design and Technology for Teachers",
+	"college": "Education",
+	"value": ["4"],
+	"level": "GRAD_CERT",
+	"modal": "teachtech"
+}, {
+	"name": "Certificate in Online Learning and Teaching",
+	"college": "Education",
+	"value": ["4"],
+	"level": "GRAD_CERT",
+	"modal": "colt"
+}, {
+	"name": "Disability and Diversity Studies Certificate",
+	"college": "Education",
+	"value": ["4"],
+	"level": "GRAD_CERT",
+	"modal": "dds"
+}, {
+	"name": "Curriculum Studies (Literacy Specialist PK-12)",
+	"college": "Education",
+	"value": ["4"],
+	"level": "GRAD_CERT",
+	"modal": "curr_studies"
+}, {
+	"name": "Advanced Population Health Nursing",
+	"college": "Nursing",
+	"value": ["11"],
+	"level": "MA",
+	"modal": "aphn_MA"
+}, {
+	"name": "Curriculum Studies",
+	"college": "Education",
+	"value": ["4"],
+	"level": "MA",
+	"modal": "curr_studies_MA"
+}, {
+	"name": "Education",
+	"college": "Education",
+	"value": ["4"],
+	"level": "MA",
+	"modal": "edu_MA"
+}, {
 	"name": "Executive MBA",
 	"college": "Business",
 	"value": ["2"],
@@ -136,4 +244,52 @@
 	"value": ["2"],
 	"level": "MA",
 	"modal": "HRM_MA"
+}, {
+	"name": "Indigenous Language and Culture Education",
+	"college": "No Idea",
+	"value": ["5"],
+	"level": "MA",
+	"modal": "ilce"
+}, {
+	"name": "Learning Design and Technology",
+	"college": "No Idea",
+	"value": ["4"],
+	"level": "MA",
+	"modal": "ldt"
+}, {
+	"name": "Library & Information Science",
+	"college": "Library and Information Sciences",
+	"value": ["9"],
+	"level": "MA",
+	"modal": "lib_is"
+}, {
+	"name": "Music Education",
+	"college": "Education",
+	"value": ["4"],
+	"level": "MA",
+	"modal": "music_edu"
+}, {
+	"name": "Rehabilitation Counseling",
+	"college": "Kinesiology and Rehabilitation Science",
+	"value": ["7"],
+	"level": "MA",
+	"modal": "rehab_counsel"
+}, {
+	"name": "Social Work",
+	"college": "Social Work",
+	"value": ["16"],
+	"level": "MA",
+	"modal": "social_work"
+}, {
+	"name": "Special Education",
+	"college": "Education",
+	"value": ["4"],
+	"level": "MA",
+	"modal": "special_ed"
+}, {
+	"name": "Nursing (PhD)",
+	"college": "Nursing",
+	"value": ["11"],
+	"level": "PHD",
+	"modal": "nursing_phd"
 }]

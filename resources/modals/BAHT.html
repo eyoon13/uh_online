@@ -1,6 +1,7 @@
 <?php
   $url="http://www.uhwo.hawaii.edu/academics/degrees-and-certificates/bachelor-of-arts-in-business-administration/hospitality-and-tourism/";
-  $code="BAHT(BA)";
+  $code="Business Administration, Hospitality and Tourism (Bachelor of Arts)";
+  $campus="UH West Oahu"
 ?>
 
 <div class="modal-content">
@@ -14,11 +15,8 @@
     Degree Awarded: Bachelor of Arts (BA)</br>
     URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
     Contact: Dr. Derrek Choy</br>Phone: (808) 689-2332</br>Email: derrekc@hawaii.edu
-  <div class="modal-footer">
-    <input type="hidden" id="course_value">
-    <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
-    <button type="button" id="apply2" class="btn btn-primary" data-toggle="modal" data-target="#reg_form">Apply to this program</button>
-    <button data-dismiss="modal" id="dismiss" class="btn btn-danger">Dismiss</button>
-  </div>
+            <div class="modal-footer">
+              <?php include('resources/templates/modal_form.html'); ?>
+            </div>
 </div>
 </div>

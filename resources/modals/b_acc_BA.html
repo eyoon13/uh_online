@@ -1,6 +1,7 @@
 <?php
   $url="http://www.uhwo.hawaii.edu/academics/degrees-and-certificates/bachelor-of-arts-in-business-administration/accounting/";
-  $code="Business_Accounting(BA)";
+  $code="Business Administration, Accounting (Bachelor of Arts)";
+  $campus="UH West Oahu"
 ?>
 
 <div class="modal-content">
@@ -15,10 +16,6 @@
     URL: <a href=<?php echo($url);?>><?php echo($url);?></a></br>
     Contact: Dr. Franklin Kudo</br>Phone: (808) 689-2331</br>Email: fkudo@hawaii.edu
   <div class="modal-footer">
-    <input type="hidden" id="course_value">
-    <button type="button" id="more_info_btn" value=<?php echo($code);?> class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">More information about this program</button>
-    <button type="button" id="apply2" class="btn btn-primary" data-toggle="modal" data-target="#reg_form">Apply to this program</button>
-    <button data-dismiss="modal" id="dismiss" class="btn btn-danger">Dismiss</button>
+    <?php include('resources/templates/modal_form.html'); ?>
   </div>
-</div>
 </div>

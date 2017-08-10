@@ -66,7 +66,7 @@
 switch ($val){
   case 1:
     $programType = "Accounting";
-    //create new array for table
+    //create new array for table for Accounting
     $CERT        = array();
     $AA          = array();
     $BA          = array();
@@ -109,7 +109,7 @@ switch ($val){
 
   case 2:
     $programType = "Business";
-    //create new array for table
+    //create new array for table Business
   $CERT        = array();
   $AA          = array();
   $BA          = array();
@@ -150,12 +150,704 @@ switch ($val){
   }
     break;
 
+  case 3:
+    $programType = "Disability Studies";
+    //create new array for table Disability Studies
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "3"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "3"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "3"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 4:
+    $programType = "Education";
+    //create new array for table Education
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "4"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "4"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "4"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 5:
+    $programType = "Indigenous Language";
+    //create new array for table Indigenous Language and Culture Education
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "5"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "5"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "5"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 6:
+    $programType = "Interdisciplinary Studies";
+    //create new array for table Interdisciplinary Studies
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "6"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "6"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "6"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 7:
+    $programType = "Kinesiology and Rehabilitation Science";
+    //create new array for table Kinesiology and Rehabilitation Science
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "7"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "7"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "7"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 8:
+    $programType = "Liberal Arts";
+    //create new array for table Liberal Arts
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "8"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "8"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "8"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 9:
+    $programType = "Library and Information Sciences";
+    //create new array for table Library and Information Sciences
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "9"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "9"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "9"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 10:
+    $programType = "Management";
+    //create new array for table Management
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "10"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "10"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "10"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 11:
+    $programType = "Nursing";
+    //create new array for table Nursing
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "11"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "11"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "11"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 12:
+    $programType = "Political Science";
+    //create new array for table Political Science
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "12"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "12"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "12"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 13:
+    $programType = "Psychology";
+    //create new array for table Psychology
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "13"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "13"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "13"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 14:
+    $programType = "Public Administration";
+    //create new array for table Public Administration
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "14"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "14"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "14"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 15:
+    $programType = "RMI";
+    //create new array for table Risk Management and Insurance (RMI)
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "15"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "15"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "15"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 16:
+    $programType = "Social Work";
+    //create new array for table Social Work
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "16"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "16"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "16"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 17:
+    $programType = "SAAS";
+    //create new array for table Substance Abuse and Addictions Studies
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "17"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "17"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "17"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
+
+  case 18:
+    $programType = "Writing";
+    //create new array for table Writing
+  $CERT        = array();
+  $AA          = array();
+  $BA          = array();
+  foreach($course_array as $program){
+    if($program->level=="CERT"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "18"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($CERT, $double_arr);
+        }
+      }
+    }
+    if($program->level=="AA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "18"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($AA, $double_arr);
+        }
+      }
+    }
+    if($program->level=="BA"){
+      $double_arr = array();
+      $ar = $program->value;
+      foreach($ar as $nums){
+        if($nums == "18"){
+          array_push($double_arr,  $program->course_name);
+          array_push($double_arr,  $program->modal);
+          array_push($BA, $double_arr);
+        }
+      }
+    }
+  }
+    break;
 
   default:
     $programType = "All Programs";
   $CERT        = array();
   $AA          = array();
   $BA          = array();
+  $PBA         = array();
+  $GRAD_CERT   = array();
+  $MA          = array();
+  $PHD         = array();
+
   foreach($course_array as $program){
     if($program->level=="CERT"){
       $double_arr = array();
@@ -174,6 +866,30 @@ switch ($val){
         array_push($double_arr,  $program->course_name);
         array_push($double_arr,  $program->modal);
         array_push($BA, $double_arr);
+    }
+    if($program->level=="PBA"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($PBA, $double_arr);
+    }
+    if($program->level=="GRAD_CERT"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($GRAD_CERT, $double_arr);
+    }
+    if($program->level=="MA"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($MA, $double_arr);
+    }
+    if($program->level=="PHD"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($PHD, $double_arr);
     }
   }
 }

@@ -12,6 +12,54 @@
     echo($_POST['course_dropdown']);
   }else{$_valueDropdown ="";}
 
+   class program{
+    
+    public $course_name;
+    public $college;
+    public $value;
+    public $level;
+    public $modal;
+
+  }
+
+  $course_array = array();
+
+  $json_file = file_get_contents("programs.json");
+  $array     = json_decode($json_file);
+  foreach ($array as $key => $jsons) { // search each program
+    $course = new program();
+     foreach($jsons as $key => $value) { 
+      if($key==="name"){
+        $course->course_name = $value;
+      }
+      if($key==="college"){
+        $course->college = $value;
+      }
+      if($key==="value"){
+        $course->value = $value;
+      }
+      if($key==="level"){
+        $course->level = $value;
+      }
+      if($key==="modal"){
+        $course->modal = $value;
+      }       
+     // get each value within the program    
+     }
+     array_push($course_array, $course);
+}
+
+$programType = "All Programs";
+  $AA        = array();
+  foreach($course_array as $program){
+    if($program->level=="AA"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($AA, $double_arr);
+    }
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,77 +101,24 @@
     <header>
       <?php include_once('resources/templates/header.php'); ?>
     </header>
+    <?php include_once('resources/modal.html'); ?>
 
-<!-- Acc AA Modal-->    
-      <div class="modal fade" id="acc_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/acc_AA.html'); ?>
-        </div>
-</div>
-
-<!-- Liberal Arts AA Modal-->    
-      <div class="modal fade" id="la_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/la_AA.html'); ?>
-        </div>
-</div>
-
-
-<!-- Teaching AA Modal-->    
-      <div class="modal fade" id="teach_AA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/teach_AA.html'); ?>
-        </div>
-</div>
-
-
-<!-- Form Modal-->
-      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600;">
-        <div class="modal-dialog modal-lg" role="document">
-          <?php include('resources/modals/formA.html'); ?>
-        </div>
-      </div>
 <!--Table-->
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
                  <h3>Associate of Arts Degree Programs</h3>
-              <div class="table">
-                <div class="row-table header">
-                  <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a data-toggle="modal" data-target="#acc_AA">Accounting</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a data-toggle="modal" data-target="#la_AA">Libral Arts</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-                <div class="row-table">
-                  <div class="cell">
-                    <a data-toggle="modal" data-target="#teach_AA">Teaching</a>
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
-              </div>
-
-              </div>
+                <?php
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Standard</div><div class="cell">Accelerated</div></div>';
+            //building html table
+            foreach($AA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
         </div>
+      </div>  
 
   <div class="parallax p2" id="section-2">
     <hgroup id="form_group">
@@ -155,7 +150,7 @@
   </body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
     <script src="docs/assets/js/application.js"></script>

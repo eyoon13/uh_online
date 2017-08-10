@@ -1,5 +1,4 @@
 <?php
-  echo($_REQUEST['val']);
   if(! empty($_POST['buttonB'])){
     $_courseID = $_POST['buttonB'];
   }else{$_courseID ="";}
@@ -55,15 +54,14 @@
 
 $programType = "All Programs";
   $CERT        = array();
-  $AA          = array();
-  $BA          = array();
   foreach($course_array as $program){
-    
+    if($program->level=="CERT"){
       $double_arr = array();
         array_push($double_arr,  $program->course_name);
         array_push($double_arr,  $program->modal);
         array_push($CERT, $double_arr);
     }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -114,22 +112,13 @@ $programType = "All Programs";
             <div class="wrapper-table">
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
                 <h3>Certificate Programs</h3>
-              <div class="table">
-                <div class="row-table header">
-                  <div class="cell">
-                    Subject
-                  </div>
-                  <div class="cell">
-                    Online
-                  </div>
-                </div>
                 <?php
-            $htmlOutput = "";
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Standard</div><div class="cell">Accelerated</div></div>';
             //building html table
             foreach($CERT as $arr){
               $name = $arr[0];
               $modalA = $arr[1];
-              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
             }
           print($htmlOutput);
           ?>

@@ -9,5 +9,15 @@ $(document).ready(function(){
 
     });
 
+    $('#togButton').click(function(){
+    	$('#grad-table').slideToggle(500);
+    	if( $(this).text() == 'Show' ) {
+        $(this).text('Hide');
+    	} else {
+        $(this).text('Show');
+    }
+
+    });
+
 
 });

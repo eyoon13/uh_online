@@ -69,7 +69,10 @@ body {
     margin-top:-50px;
 }
 /*.modal {
-    position: relative;
+    position: fixed;
+    top:50%;
+    bottom:50%;
+    transform: translate(-50%, -50%);
 }*/
 /* DISABLED TO MAKE MODAL2 WORK [CHASEK]
 body.modal-open .modal {
@@ -86,6 +89,16 @@ body.modal-open .modal .modal-dialog {
   max-width: 100px;
   padding: 6px 12px;
   display: table-cell;
+}
+
+.cell-small {
+  max-width: 60px;
+  padding: 6px 12px;
+  display: table-cell;
+}
+
+.tab{
+  text-indent: 10%;
 }
 @media screen and (max-width: 580px) {
   .cell {
@@ -344,6 +357,7 @@ footer p {
   text-indent: 20px;
   color: #ececec;
 }
+
 @media screen and (max-width: 1000px) {
     .panel {
       width: 90%;

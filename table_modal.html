@@ -1,0 +1,89 @@
+<?php 
+
+class program{
+		
+		public $course_name;
+		public $college;
+		public $value;
+		public $level;
+		public $modal;
+
+	}
+
+	$course_array = array();
+
+	$json_file = file_get_contents("programs.json");
+	$array     = json_decode($json_file);
+	foreach ($array as $key => $jsons) { // search each program
+		$course = new program();
+     foreach($jsons as $key => $value) { 
+     	if($key==="name"){
+     		$course->course_name = $value;
+     	}
+     	if($key==="college"){
+     		$course->college = $value;
+     	}
+     	if($key==="value"){
+     		$course->value = $value;
+     	}
+     	if($key==="level"){
+     		$course->level = $value;
+     	}
+     	if($key==="modal"){
+     		$course->modal = $value;
+     	}     	
+     // get each value within the program    
+     }
+     array_push($course_array, $course);
+}
+
+?>
+
+<?php include_once('table_builder.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Distance Learning at University of Hawaii</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+  <link href="css/old-styles.css" rel="stylesheet">
+  <link href="css/flat-ui.css" rel="stylesheet">
+  <link href="css/styles-chasek.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <header>
+   <?php include_once('resources/templates/header.php'); ?>
+  </header>
+  <?php include_once('resources/templates/footer.php');?> 
+</body>
+
+</html>
+
+
+

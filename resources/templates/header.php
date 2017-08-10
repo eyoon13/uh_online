@@ -4,7 +4,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
               <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand uh-branding-one" href="index.html">Distance Learning @ UH</a>
+            <a class="navbar-brand uh-branding-one" href="index.html">Get Your Degree at a Distance</a>
           </div>
           <div class="collapse navbar-collapse" id="navbar-collapse-01">
             <ul class="nav navbar-nav navbar-right">
@@ -12,15 +12,15 @@
                 <a href="program-select.html" class="dropdown-toggle" data-toggle="dropdown">Programs Offered<b class="caret"></b></a>
                 <span class="dropdown-arrow"></span>
                 <ul class="dropdown-menu">
-                  <li><a href="program-select.html">All Programs</a></li>
+                  <li><a href="dynamic.php">All Programs</a></li>
                   <li class="divider"></li>
                 <li><a href="program-select1.html">Certificate Programs</a></li>
                 <li><a href="program-select2.html">AA Programs</a></li>
                 <li><a href="program-select3.html">BA Programs</a></li>
-                <li><a href="#">Post-Baccalaureate</a></li>
-                <li><a href="#">Graduate Certificate</a></li>
-                <li><a href="#">Master Degree</a></li>
-                <li><a href="#">Doctoral Degree</a></li>
+                <li><a href="post-bac.html">Post-Baccalaureate</a></li>
+                <li><a href="grad-cert.html">Graduate Certificate</a></li>
+                <li><a href="masters-page.html">Master Degree</a></li>
+                <li><a href="phd-page.html">Doctoral Degree</a></li>
                 </ul>
               </li>
               <li><a href="https://www.hawaii.edu/dl/courses/">Courses</a></li>

@@ -100,7 +100,7 @@ body.modal-open .modal .modal-dialog {
 /* panel design */
 .panel {
   width: 400px;
-  height: 300px;
+  height: 230px;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
@@ -386,7 +386,7 @@ footer p {
 @media screen and (max-width: 1000px) {
     .panel {
       width: 90%;
-      height: 300px;
+      height: 230px;
       -webkit-border-radius: 10px;
          -moz-border-radius: 10px;
               border-radius: 10px;
@@ -508,6 +508,52 @@ footer p {
 
 .full-vert{
   min-height: 100%
+}
+.select-style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.carousel-inner>.item {
+          width: 100%;
+}
+
+.pad-bottom{
+  margin-top: 5%;
+}
+
+.panel-button {
+  width: 400px;
+  height: 80px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px black;
+     -moz-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  background: #141519;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.startingB {
+        margin-top: 6%;
 }
 
 /* Blank lines for ease and view */

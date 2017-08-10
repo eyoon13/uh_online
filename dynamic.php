@@ -1,6 +1,4 @@
 <?php include_once('table_builder.php');
-var_dump($_POST['credential']);
-var_dump($_POST['areaOfStudy']);
 
 ?>
 
@@ -22,8 +20,6 @@ var_dump($_POST['areaOfStudy']);
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-
-  <link href="css/old-styles.css" rel="stylesheet">
   <link href="css/flat-ui.css" rel="stylesheet">
   <link href="css/styles-chasek.css" rel="stylesheet">
 
@@ -50,40 +46,88 @@ var_dump($_POST['areaOfStudy']);
                 <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
                 <h3>Certificate Programs</h3>
                 <?php
-  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
-  					//building html table
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
   					foreach($CERT as $arr){
   						$name = $arr[0];
   						$modalA = $arr[1];
-  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
-  					}
+  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
 					print($htmlOutput);
   				?>
   			</div>
         <h3>Associate of Arts Degree Programs</h3>
                 <?php
-  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
-  					//building html table
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
   					foreach($AA as $arr){
   						$name = $arr[0];
   						$modalA = $arr[1];
-  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
-  					}
+  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
 					print($htmlOutput);
   				?>
   			</div>
             <h3>Bachelor Degree Programs</h3>
                 <?php
-  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Path to Graduation</div></div>';
-  					//building html table
+  					$htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
   					foreach($BA as $arr){
   						$name = $arr[0];
   						$modalA = $arr[1];
-  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div></div>';
-  					}
+  						$htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
 					print($htmlOutput);
   				?>
   			</div>
+        <h3>Post-Baccalaureate Degree Programs</h3>
+                <?php
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
+            foreach($PBA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+        <h3>Graduate Certificate Degree Programs</h3>
+                <?php
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
+            foreach($GRAD_CERT as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+        <h3>Master Degree Programs</h3>
+                <?php
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
+            foreach($MA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+        <h3>Doctorate Degree Programs</h3>
+                <?php
+            $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell tab">Standard</div><div class="cell tab">Accelerated</div></div>';
+            //building html table
+            foreach($PHD as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell tab"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
         </div>
   <div class="parallax p2" id="section-2">
     <hgroup id="form_group">

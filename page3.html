@@ -31,6 +31,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>document.write('<style>.js_hidden { display: none; }</style>');</script>
 
 </head>
 
@@ -166,6 +167,86 @@
         </div>
     </div>
     <h2 class"page-header">Graduate Programs At The University of Hawaiʻi</h2>
+    <div class="rowA">
+      <div>Programs <button id="togButton">Show</button></div> 
+    </div>
+    <div class="js_hidden" id="grad-table">
+      <div class="col-xs-4 col-md-4">
+        <div class="table">
+          <div class="row-table header">
+            <div class="cell">
+              Post-Baccalaureate Programs
+            </div>
+          </div>
+              <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($PBA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+        <div class="table">
+          <div class="row-table header">
+            <div class="cell">
+              Doctorate Programs
+            </div>
+          </div>
+              <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($PHD as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+      </div>
+      <div class="col-xs-4 col-md-4">
+              <div class="table">
+                <div class="row-table header">
+                  <div class="cell">
+                    Graduate Certificate Programs
+                  </div>
+                </div>
+                <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($GRAD_CERT as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'">'.$name.'</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+        </div>
+      </div> 
+      <div class="col-xs-4 col-md-4">
+              <div class="table">
+                <div class="row-table header">
+                  <div class="cell">
+                    Master Degree Programs
+                  </div>
+                </div>
+                <?php
+            $htmlOutput = "";
+            //building html table
+            foreach($MA as $arr){
+              $name = $arr[0];
+              $modalA = $arr[1];
+              $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div></div>';
+            }
+          print($htmlOutput);
+          ?>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
     <div class="parallax p2" id="section-2">
       <hgroup>

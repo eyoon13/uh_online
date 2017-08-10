@@ -1,0 +1,160 @@
+<?php
+  if(! empty($_POST['buttonB'])){
+    $_courseID = $_POST['buttonB'];
+  }else{$_courseID ="";}
+  if(! empty($_POST['first_name'])){
+    $_fName = $_POST['first_name'];
+  }else{$_fName ="";}
+  if(! empty($_POST['last_name'])){
+    $_lName =$_POST['last_name'];
+  }else{$_lName ="";}
+  if(! empty($_POST['course_dropdown'])){
+    echo($_POST['course_dropdown']);
+  }else{$_valueDropdown ="";}
+
+   class program{
+    
+    public $course_name;
+    public $college;
+    public $value;
+    public $level;
+    public $modal;
+
+  }
+
+  $course_array = array();
+
+  $json_file = file_get_contents("programs.json");
+  $array     = json_decode($json_file);
+  foreach ($array as $key => $jsons) { // search each program
+    $course = new program();
+     foreach($jsons as $key => $value) { 
+      if($key==="name"){
+        $course->course_name = $value;
+      }
+      if($key==="college"){
+        $course->college = $value;
+      }
+      if($key==="value"){
+        $course->value = $value;
+      }
+      if($key==="level"){
+        $course->level = $value;
+      }
+      if($key==="modal"){
+        $course->modal = $value;
+      }       
+     // get each value within the program    
+     }
+     array_push($course_array, $course);
+}
+
+$programType = "All Programs";
+  $PBA        = array();
+  foreach($course_array as $program){
+    if($program->level=="PBA"){
+      $double_arr = array();
+        array_push($double_arr,  $program->course_name);
+        array_push($double_arr,  $program->modal);
+        array_push($PBA, $double_arr);
+    }
+  }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Distance Learning at University of Hawaii</title>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+  <link href="css/old-styles.css" rel="stylesheet">
+    <link href="css/flat-ui.css" rel="stylesheet">
+    <link href="css/styles-chasek.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-target=".bd-sidenav-active">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <header>
+      <?php include_once('resources/templates/header.php'); ?>
+    </header>
+    <?php include_once('resources/modal.html'); ?>
+
+<!--Table-->    
+            <!-- Modal -->
+    <div class="wrapper-table">
+      <h2 class"page-header">Distance Learning Programs Offered At The University of Hawaiʻi</h2>
+      <h3>Post-Baccalaureate Degree Programs</h3>
+      <?php
+        $htmlOutput = '<div class="table"><div class="row-table header"><div class="cell">Subject</div><div class="cell">Standard</div><div class="cell">Accelerated</div></div>';
+      //building html table
+        foreach($PBA as $arr){
+          $name = $arr[0];
+          $modalA = $arr[1];
+          $htmlOutput .= '<div class="row-table"><div class="cell"><a href="#" data-toggle="modal" data-target="#'.$modalA.'" id="acc_modal">'.$name.'</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 6 Year Plan</a></div><div class="cell"><a href="AHBAAmericanStudies4.pdf" id="PDf">Sample 4 Year Plan</a></div></div>';
+        }
+        print($htmlOutput);
+      ?>
+    </div>
+  </div>
+
+  <div class="parallax p2" id="section-2">
+    <hgroup>
+      <form action="test.php" method="post">
+        <div class="col-md-12">
+          <h1>Please fill out this form to receive more information</h1>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" name="f_name" value="<?php echo($_fName)?>" placeholder="First Name" class="form-control" />
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" name="l_name" value="<?php echo($_lName)?>" placeholder="Last Name" class="form-control" />
+        </div>
+        <div class="form-group col-md-12" id="email-group">
+          <input type="email" name="email" placeholder="Email" class="form-control" required>
+        </div>
+        <div class="form-group col-md-12">
+          <textarea class="form-control" name="question" id="exampleTextarea" rows="3" placeholder="Have a General Question? Ask it here!"></textarea>
+        </div>
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+        </form>
+    <hgroup>
+     <div class="filler"></div> 
+  </div>
+      <?php include_once('resources/templates/footer.php');?> 
+  </body>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script>
+    <script src="docs/assets/js/application.js"></script>
+    <script src="js/program2.js"></script>
+    <script src="js/magic.js"></script>
+    <script>
+      videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+    </script>
+</html>
