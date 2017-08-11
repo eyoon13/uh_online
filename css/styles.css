@@ -65,11 +65,13 @@ body {
     margin-left:-50px;
     margin-top:-50px;
 }
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
+/*.modal {
+    position: fixed;
+    top:50%;
+    bottom:50%;
+    transform: translate(-50%, -50%);
+}*/
+/* DISABLED TO MAKE MODAL2 WORK [CHASEK]
 body.modal-open .modal {
     display: flex !important;
     height: 50%;
@@ -78,11 +80,21 @@ body.modal-open .modal {
 body.modal-open .modal .modal-dialog {
     margin: auto;
 }
+*/
 
 .cell {
   max-width: 100px;
   padding: 6px 12px;
   display: table-cell;
+}
+.cell-small {
+  max-width: 60px;
+  padding: 6px 12px;
+  display: table-cell;
+}
+
+.tab{
+  text-indent: 10%;
 }
 @media screen and (max-width: 580px) {
   .cell {
@@ -554,6 +566,10 @@ footer p {
 
 .startingB {
         margin-top: 6%;
+}
+
+.lineup{
+  display: inline-block;
 }
 
 /* Blank lines for ease and view */

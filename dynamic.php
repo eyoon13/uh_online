@@ -21,7 +21,7 @@
 
     <!-- Custom CSS -->
   <link href="css/flat-ui.css" rel="stylesheet">
-  <link href="css/styles-chasek.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -154,8 +154,10 @@
       </form>
     <hgroup>
   </div>
-        <?php include_once('resources/templates/footer.php'); ?>
-  </body>
+
+<?php include_once('resources/templates/footer.php'); ?>
+
+</body>
 
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="js/vendor/jquery.min.js"></script>

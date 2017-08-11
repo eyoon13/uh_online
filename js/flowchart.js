@@ -18,4 +18,16 @@ $(document).ready(function() {
             $('#course_listings').append('<li>'+course_val+'</li>');
         });
     });
+
+    $('#year_submit').click(function(){
+        $('#year_form').submit();
+    });
+
+
+    $('#save').click(function(){
+        $('.table_form').each(function(){
+            console.log("hello");
+        });
+    });
+
 });
