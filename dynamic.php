@@ -38,7 +38,7 @@
   <header>
    <?php include_once('resources/templates/header.php'); ?>
   </header>
-  <?php include_once('resources/modals.html'); ?>
+  <?php include_once('resources/modal.html'); ?>
 
 <!-- Course Table -->
 
